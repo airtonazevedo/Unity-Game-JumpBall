@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 29eb1bbb9ade1d640aabb80e523b8ca4
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Bola: {fileID: 100000, guid: 7bcba45e5857d934ea6e480b3f4b9df5, type: 2}
+  - chao: {fileID: 100000, guid: 87981b24a3ebbf445aea125071aa8e80, type: 2}
+  - espinho: {fileID: 100000, guid: 60c326f8e8f29864592aed7cccc10169, type: 2}
+  - agua: {fileID: 100000, guid: 0a08d3a27b2ba1c4383c55df9eddfad2, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
