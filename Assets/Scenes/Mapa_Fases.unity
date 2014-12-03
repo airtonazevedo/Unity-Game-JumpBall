@@ -311,6 +311,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
   m_RootGameObject: {fileID: 1739927533}
@@ -533,8 +537,8 @@ GameObject:
   - 124: {fileID: 162702608}
   - 81: {fileID: 162702607}
   - 114: {fileID: 162702612}
-  - 114: {fileID: 162702613}
   - 114: {fileID: 162702614}
+  - 114: {fileID: 162702613}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -632,7 +636,7 @@ MonoBehaviour:
   Camera: {fileID: 162702610}
   Bounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 5, y: 3.75, z: 0}
+    m_Extent: {x: 4.5, y: 4.5, z: 0}
 --- !u!114 &162702614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +733,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
       value: Fase1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
@@ -1134,6 +1142,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
       value: Fase3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
@@ -1781,13 +1793,13 @@ MonoBehaviour:
   Count: 5
   WaypointsMover: {fileID: 189784498}
   CharacterLevel: {fileID: 0}
-  TranslationType: 1
+  TranslationType: 0
   StarsEnabled: 1
   StarsType: 0
   ScrollingEnabled: 1
   MapCamera: {fileID: 162702613}
   IsClickEnabled: 1
-  IsConfirmationEnabled: 0
+  IsConfirmationEnabled: 1
 --- !u!1 &672348839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3670,6 +3682,14 @@ Prefab:
       propertyPath: SceneName
       value: Fase5
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
   m_RootGameObject: {fileID: 785699635}
@@ -3900,6 +3920,14 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
       value: Fase7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
@@ -4724,6 +4752,10 @@ Prefab:
       propertyPath: SceneName
       value: Fase2
       objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
   m_RootGameObject: {fileID: 981181085}
@@ -5085,6 +5117,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
       value: Fase4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
