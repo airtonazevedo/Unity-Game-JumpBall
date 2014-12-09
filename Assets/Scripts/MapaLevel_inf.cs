@@ -5,54 +5,85 @@ using Assets.Plugins.SmartLevelsMap.Scripts;
 [ExecuteInEditMode]
 public class MapaLevel_inf : MonoBehaviour {
 
-    private GUIStyle gs;
-    public Texture2D estrela, coin;
+
 	// Use this for initialization
+	void OnEnable()
+	{
+		Debug.Log("Subscribe to events.");
+		LevelsMap.LevelSelected += OnLevelSelected;
+
+	}
+
+	public void OnDisable()
+	{
+				Debug.Log ("Unsubscribe from events.");
+				LevelsMap.LevelSelected -= OnLevelSelected;
+	}
+
     void OnGUI()
     {
-  
-        GUI.backgroundColor = Color.black;
-        GUI.Box(new Rect(5, -1, 60, 25), "");
-        if (GUI.Button(new Rect(5, -1, 60, 25),"" ))
-        {
-            Debug.Log("Ar");
-        }
+		
+		float h1 = 0.11f, w1 = 0, x1 = -0.4f,x2=-0.2f, x3 = 0.45f, y1 = -0.435f, fonte=0.03f;
+		
+		float h, w, x, y;
+		string texto1 = "0000", texto2 = "0000", texto3 = "0000";
+		
+		h = Screen.height * h1;
+		w = h + w1*Screen.height;
+		
+		x = Screen.width / 2 - w / 2 + x1 * Screen.width;
+		y = Screen.height / 2 - w / 2 + y1*Screen.height;
+
+		fonte *= Screen.width;
+		Debug.Log (fonte.ToString ());
+		texto3 = Banco.TotalDeEstrelas().ToString();
+
+		GUI.Label (new Rect (x, y, w*2, h), "<size=" + fonte.ToString () + ">" + texto1 + "</size>");
+
+		x = Screen.width / 2 - w / 2 + x2 * Screen.width;
+
+		GUI.Label (new Rect (x, y, w*2, h), "<size=" + fonte.ToString () + ">" + texto2 + "</size>");
+
+		x = Screen.width / 2 - w / 2 + x3 * Screen.width;
+
+		GUI.Label (new Rect (x, y, w*2, h), "<size=" + fonte.ToString () + ">" + texto3 + "</size>");
 
 
-        GUI.Box(new Rect(70, -1, 60, 25), "");
-        if (GUI.Button(new Rect(70, -1, 60, 25), ""))
-        {
-            Debug.Log("Dinheiro");
-        }
 
-
-        GUI.Box(new Rect(Screen.width - 65, -1, 60, 25), "");
-        if (GUI.Button(new Rect(Screen.width-65, -1, 60, 25), ""))
-        {
-            Debug.Log("Estrelas");
-        }
-        GUI.backgroundColor = Color.clear;
-
-        GUI.Box(new Rect(0, -2, 30, 30), coin);
-        GUI.Label(new Rect(30, 1, 30, 30), "0000");
-
-
-        GUI.Box(new Rect(65, -2, 30, 30), coin);
-        GUI.Label(new Rect(95, 1, 30, 30), "0000");
-
-
-        GUI.Box(new Rect(Screen.width-70, -2, 30, 30), estrela);
-        GUI.Label(new Rect(Screen.width-40, 1, 30, 30), Banco.TotalDeEstrelas().ToString());
-       
-    
         
 
 
-           
+        
+	}
+
+	private void OnLevelSelected(object sender, LevelReachedEventArgs e)
+	{
+		Debug.Log("asdd");
+		if (LevelsMap.GetIsConfirmationEnabled())
+		{
+			int SelectedLevelNumber = e.Number;
+		//	e.
+			//ConfirmationView.SetActive(true);
+			Debug.Log(SelectedLevelNumber.ToString());
+		}
+	}
+	/*
+	private void OnNoButtonClick(object sender, EventArgs e)
+	{
+		ConfirmationView.SetActive(false);
 	}
 	
+	private void OnYesButtonClick(object sender, EventArgs e)
+	{
+		ConfirmationView.SetActive(false);
+		LevelsMap.GoToLevel(SelectedLevelNumber);
+	}
+*/
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+
+
 }

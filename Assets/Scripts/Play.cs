@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[ExecuteInEditMode]
 public class Play : MonoBehaviour {
 
 	// Use this for initialization
@@ -29,9 +30,14 @@ public class Play : MonoBehaviour {
             Debug.LogError("Please assign a texture on the inspector");
             return;
         }
-        if (GUI.Button(new Rect(x ,y , w, h), btnTexture, buttonStyle))
-            transform.parent.SendMessage(nome);
-
+        if (GUI.Button (new Rect (x, y, w, h), btnTexture, buttonStyle)) {
+				
+			if (nome != "") {
+			
+				transform.parent.SendMessage (nome);
+				}
+			else{Debug.Log("Nome!");}
+		}
        
 
     }
