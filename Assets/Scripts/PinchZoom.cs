@@ -12,7 +12,7 @@ public class PinchZoom : MonoBehaviour
     {
         if (camera.orthographicSize > max)
         {
-            camera.orthographicSize *= 0.9f;
+            camera.orthographicSize = max;
             camera.transform.position = new Vector3(0,0,-10);
           
 
