@@ -26,7 +26,7 @@ public class Colisao : MonoBehaviour {
          } 
         if (collision.collider.CompareTag("Bola"))
         {
-            transform.parent.SendMessage("Reiniciar");
+             transform.parent.SendMessage("Reiniciar");
         }
         if (collision.collider.CompareTag("Pecas"))
         {
@@ -39,7 +39,7 @@ public class Colisao : MonoBehaviour {
                 }
                 else
                 {
-                    if (item.normal.y > 0.8f)
+                    if (item.normal.y > 0.7f)
                     {
                         transform.parent.SendMessage("PecasColisao");
                     }
@@ -49,7 +49,21 @@ public class Colisao : MonoBehaviour {
         }
         if (collision.collider.CompareTag("Up"))
         {
-            transform.parent.SendMessage("UpColisao");
+            foreach (var item in collision.contacts)
+            {
+                if (item.normal.x == 0)
+                {
+
+                    transform.parent.SendMessage("UpColisao");
+                }
+                else
+                {
+                    if (item.normal.y > 0.7f)
+                    {
+                        transform.parent.SendMessage("UpColisao");
+                    }
+                }
+            }
         }
         
     }
@@ -58,8 +72,7 @@ public class Colisao : MonoBehaviour {
     {
         if (colisor.CompareTag("Finish"))
         {
-
-            transform.parent.SendMessage("Reiniciar");
+              transform.parent.SendMessage("Reiniciar");
         }
         if (colisor.CompareTag("Agua"))
         {

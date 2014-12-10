@@ -13,7 +13,6 @@ public class HomeScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         
-
         _bolaini = Vector3.zero;
         _velocidade = 2.5f;
         _bolaini = Bolao.transform.position;

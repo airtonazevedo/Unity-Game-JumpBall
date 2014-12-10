@@ -64,6 +64,7 @@ public class ResultManager : MonoBehaviour
 	///</Summary>
 	public void ShowResultBox(bool isWin, int star, CallbackFunction[] functions)
 	{
+       // Debug.Log(star.ToString());
 		win = isWin	;
 		lose = !isWin;
 		currentShowStar  = 0;
@@ -71,10 +72,15 @@ public class ResultManager : MonoBehaviour
 		numberOfStar = star;
 		callbackFunctions.Clear();
 		callbackFunctions.AddRange(functions);
-	}
+        if (lose && star == 0)
+        {
+            lose = !lose;
+        }
+
+     }
 	void OnGUI()
-	{		
-		GUI.skin = guiSkin;
+    {
+       GUI.skin = guiSkin;
 		
 		float scaleY = Screen.height/768f;
 		//Set button's width, height equals 1/10 screen height

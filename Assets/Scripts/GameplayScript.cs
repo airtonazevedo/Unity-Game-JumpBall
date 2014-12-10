@@ -134,16 +134,17 @@ public class GameplayScript : MonoBehaviour {
 
     void Reiniciar()
     {
+
         Bola.renderer.enabled = false;
         Bola.collider2D.isTrigger = true;
         Time.timeScale = 0;
-        ResultManager.Instance.ShowResultBox(false, 0, new CallbackFunction[] { DoChooseLevels, DoReplay });
+        ResultManager.Instance.ShowResultBox(false, 1, new CallbackFunction[] { DoChooseLevels, DoReplay });
 	
     }
 
     void Vencer()
     {
-
+        Bola.SetActive(false);
         Bola.renderer.enabled = false;
         Bola.collider2D.isTrigger = true;
         //Time.timeScale = 0;
@@ -308,6 +309,7 @@ public class GameplayScript : MonoBehaviour {
          {
              if (!_vence)
              {
+                 Tempo.fontSize = Convert.ToInt32(Math.Round(Screen.width * 0.03f));
                  Tempo.text = String.Format("{0:0.00}", temp);
              }
          }
@@ -317,7 +319,7 @@ public class GameplayScript : MonoBehaviour {
     public static void DoChooseLevels()
     {
         Time.timeScale = 1;
-        Application.LoadLevel(0);
+        Application.LoadLevel("Mapa_Fases");
     }
 
     public static void DoReplay()

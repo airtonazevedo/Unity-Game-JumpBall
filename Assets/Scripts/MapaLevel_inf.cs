@@ -9,14 +9,14 @@ public class MapaLevel_inf : MonoBehaviour {
 	// Use this for initialization
 	void OnEnable()
 	{
-		Debug.Log("Subscribe to events.");
+	//	Debug.Log("Subscribe to events.");
 		LevelsMap.LevelSelected += OnLevelSelected;
 
 	}
 
 	public void OnDisable()
 	{
-				Debug.Log ("Unsubscribe from events.");
+				//Debug.Log ("Unsubscribe from events.");
 				LevelsMap.LevelSelected -= OnLevelSelected;
 	}
 
@@ -35,7 +35,7 @@ public class MapaLevel_inf : MonoBehaviour {
 		y = Screen.height / 2 - w / 2 + y1*Screen.height;
 
 		fonte *= Screen.width;
-		Debug.Log (fonte.ToString ());
+		//Debug.Log (fonte.ToString ());
 		texto3 = Banco.TotalDeEstrelas().ToString();
 
 		GUI.Label (new Rect (x, y, w*2, h), "<size=" + fonte.ToString () + ">" + texto1 + "</size>");
