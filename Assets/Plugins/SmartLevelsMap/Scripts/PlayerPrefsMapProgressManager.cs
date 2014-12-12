@@ -79,7 +79,7 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 		{
 			fases.Add (new FaseClass ("Fase1", -1, false, false, false, true));
 
-			for (int i = 2; i<10; i++) {
+			for (int i = 2; i<20; i++) {
 				
 				fases.Add (new FaseClass ("Fase" + i.ToString(), -1, false, false, false, false));
 				

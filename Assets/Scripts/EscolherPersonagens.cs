@@ -25,8 +25,8 @@ public class EscolherPersonagens : MonoBehaviour {
         }
         
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
-       
 
+        Personagem.sprite = tex;
         Personagem.transform.Rotate(0, 0, -100 * Time.deltaTime);
 
     }

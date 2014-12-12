@@ -33,7 +33,7 @@ public class Personagens : MonoBehaviour {
 
             if (GUI.Button(new Rect(x, y, w, h), btnTexture[i])) { 
               //  transform.parent.SendMessage(nome[i]);
-                PlayerPrefs.SetInt("bola",i);
+                  PlayerPrefs.SetInt("bola",i);
         }
 
         }
@@ -44,7 +44,7 @@ public class Personagens : MonoBehaviour {
             x = (Screen.width / 6 * (i + 1 -5)) - w / 2;
 
             if (GUI.Button(new Rect(x, y, w, h), btnTexture[i])){
-                //transform.parent.SendMessage(nome[i]);
+              //  transform.parent.SendMessage(nome[i]);
                 PlayerPrefs.SetInt("bola",i);
             }
 
