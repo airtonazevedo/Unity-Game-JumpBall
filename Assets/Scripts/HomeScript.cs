@@ -68,6 +68,7 @@ public class HomeScript : MonoBehaviour {
 
     void Configuracoes()
     {
+        Application.LoadLevel("Configuracao");
         Banco.Limpar();
      }
     

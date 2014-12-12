@@ -9,7 +9,7 @@ public class GameplayScript : MonoBehaviour {
     public GameObject Estrelaa;
     public GameObject Estrelab;
     public GameObject Estrelac;
-	public string proximafase = "Fase";
+    public string proximafase = "Fase";
 
     private bool _segurabotaod, _segurabotaol, subir, _vence, _melhortempo, _validatempo;
     private float _velocidade, _velocidadepulo;
@@ -26,8 +26,6 @@ public class GameplayScript : MonoBehaviour {
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
         Bola.GetComponent<SpriteRenderer>().sprite = tex;
        // Bola.sprite = tex;
-     
-        
 
         _pos = Vector3.zero;
         _segurabotaod = false;

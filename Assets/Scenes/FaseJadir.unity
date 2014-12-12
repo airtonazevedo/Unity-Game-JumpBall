@@ -177,8 +177,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 19549276}
   - 212: {fileID: 19549275}
-  - 60: {fileID: 19549274}
   - 114: {fileID: 19549273}
+  - 61: {fileID: 19549277}
+  - 61: {fileID: 19549274}
   m_Layer: 0
   m_Name: tetris_5
   m_TagString: Pecas
@@ -199,26 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &19549274
-PolygonCollider2D:
+--- !u!61 &19549274
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
     type: 2}
   m_PrefabInternal: {fileID: 1935076074}
   m_GameObject: {fileID: 19549272}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.120435141, y: .241222784}
-      - {x: -.120504856, y: .00148463249}
-      - {x: -.359999985, y: .00165801647}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .358777136, y: .00410362193}
-      - {x: .11771784, y: .00313143735}
-      - {x: .117989637, y: .239999995}
+  m_Size: {x: .239999995, y: .239999995}
+  m_Center: {x: 0, y: .119999997}
 --- !u!212 &19549275
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -254,6 +247,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &19549277
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1935076074}
+  m_GameObject: {fileID: 19549272}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .720000029, y: .239999995}
+  m_Center: {x: 0, y: -.119999997}
 --- !u!1001 &32630851
 Prefab:
   m_ObjectHideFlags: 0
@@ -311,8 +316,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 57671624}
   - 212: {fileID: 57671623}
-  - 60: {fileID: 57671622}
   - 114: {fileID: 57671621}
+  - 61: {fileID: 57671625}
+  - 61: {fileID: 57671622}
   m_Layer: 0
   m_Name: tetris_5
   m_TagString: Pecas
@@ -333,26 +339,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &57671622
-PolygonCollider2D:
+--- !u!61 &57671622
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
     type: 2}
   m_PrefabInternal: {fileID: 373360867}
   m_GameObject: {fileID: 57671620}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.120435141, y: .241222784}
-      - {x: -.120504856, y: .00148463249}
-      - {x: -.359999985, y: .00165801647}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .358777136, y: .00410362193}
-      - {x: .11771784, y: .00313143735}
-      - {x: .117989637, y: .239999995}
+  m_Size: {x: .239999995, y: .239999995}
+  m_Center: {x: 0, y: .119999997}
 --- !u!212 &57671623
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -388,6 +386,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &57671625
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 373360867}
+  m_GameObject: {fileID: 57671620}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .720000029, y: .239999995}
+  m_Center: {x: 0, y: -.119999997}
 --- !u!1001 &80379993
 Prefab:
   m_ObjectHideFlags: 0
@@ -437,8 +447,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 123165091}
   - 212: {fileID: 123165090}
-  - 60: {fileID: 123165089}
   - 114: {fileID: 123165088}
+  - 61: {fileID: 123165092}
+  - 61: {fileID: 123165089}
   m_Layer: 0
   m_Name: tetris_5
   m_TagString: Pecas
@@ -459,26 +470,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &123165089
-PolygonCollider2D:
+--- !u!61 &123165089
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
     type: 2}
   m_PrefabInternal: {fileID: 779667764}
   m_GameObject: {fileID: 123165087}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.120435141, y: .241222784}
-      - {x: -.120504856, y: .00148463249}
-      - {x: -.359999985, y: .00165801647}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .358777136, y: .00410362193}
-      - {x: .11771784, y: .00313143735}
-      - {x: .117989637, y: .239999995}
+  m_Size: {x: .239999995, y: .239999995}
+  m_Center: {x: 0, y: .119999997}
 --- !u!212 &123165090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -514,6 +517,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &123165092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 779667764}
+  m_GameObject: {fileID: 123165087}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .720000029, y: .239999995}
+  m_Center: {x: 0, y: -.119999997}
 --- !u!1001 &131728517
 Prefab:
   m_ObjectHideFlags: 0
@@ -768,8 +783,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 264121906}
   - 212: {fileID: 264121905}
-  - 60: {fileID: 264121904}
   - 114: {fileID: 264121903}
+  - 61: {fileID: 264121907}
+  - 61: {fileID: 264121904}
   m_Layer: 0
   m_Name: tetris_4
   m_TagString: Pecas
@@ -790,26 +806,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &264121904
-PolygonCollider2D:
+--- !u!61 &264121904
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+  m_PrefabParentObject: {fileID: 6100000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
     type: 2}
   m_PrefabInternal: {fileID: 877573160}
   m_GameObject: {fileID: 264121902}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.121862032, y: .24000001}
-      - {x: -.122950695, y: .00311760907}
-      - {x: -.359999985, y: .0018620491}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .120350517, y: -.239999995}
-      - {x: .120258681, y: -.00127511029}
-      - {x: .359999985, y: -.00186202524}
-      - {x: .359999985, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: .119999997}
 --- !u!212 &264121905
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -845,6 +853,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &264121907
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 877573160}
+  m_GameObject: {fileID: 264121902}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: -.119999997}
 --- !u!1 &268034546
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,8 +874,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 268034550}
   - 212: {fileID: 268034549}
-  - 60: {fileID: 268034548}
   - 114: {fileID: 268034547}
+  - 61: {fileID: 268034551}
+  - 61: {fileID: 268034548}
   m_Layer: 0
   m_Name: tetris_6
   m_TagString: Pecas
@@ -876,26 +897,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &268034548
-PolygonCollider2D:
+--- !u!61 &268034548
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
     type: 2}
   m_PrefabInternal: {fileID: 245992212}
   m_GameObject: {fileID: 268034546}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.359999985, y: .239999995}
-      - {x: -.359999985, y: .00102689269}
-      - {x: -.122908883, y: .00139815814}
-      - {x: -.121976934, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .360000014, y: .00197694311}
-      - {x: .119636849, y: .00205519213}
-      - {x: .118973099, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: .119999997}
 --- !u!212 &268034549
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -931,6 +944,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &268034551
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+    type: 2}
+  m_PrefabInternal: {fileID: 245992212}
+  m_GameObject: {fileID: 268034546}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: -.119999997}
 --- !u!1001 &280075314
 Prefab:
   m_ObjectHideFlags: 0
@@ -1512,8 +1537,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 463148367}
   - 212: {fileID: 463148366}
-  - 60: {fileID: 463148365}
   - 114: {fileID: 463148364}
+  - 61: {fileID: 463148368}
+  - 61: {fileID: 463148365}
   m_Layer: 0
   m_Name: tetris_6
   m_TagString: Pecas
@@ -1534,26 +1560,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &463148365
-PolygonCollider2D:
+--- !u!61 &463148365
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
     type: 2}
   m_PrefabInternal: {fileID: 1621883621}
   m_GameObject: {fileID: 463148363}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.359999985, y: .239999995}
-      - {x: -.359999985, y: .00102689269}
-      - {x: -.122908883, y: .00139815814}
-      - {x: -.121976934, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .360000014, y: .00197694311}
-      - {x: .119636849, y: .00205519213}
-      - {x: .118973099, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: .119999997}
 --- !u!212 &463148366
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1589,6 +1607,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &463148368
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1621883621}
+  m_GameObject: {fileID: 463148363}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: -.119999997}
 --- !u!1 &485778802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,8 +1713,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 536363348}
   - 212: {fileID: 536363347}
-  - 60: {fileID: 536363346}
   - 114: {fileID: 536363345}
+  - 61: {fileID: 536363349}
+  - 61: {fileID: 536363346}
   m_Layer: 0
   m_Name: tetris_4
   m_TagString: Pecas
@@ -1705,26 +1736,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &536363346
-PolygonCollider2D:
+--- !u!61 &536363346
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+  m_PrefabParentObject: {fileID: 6100000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
     type: 2}
   m_PrefabInternal: {fileID: 1829647775}
   m_GameObject: {fileID: 536363344}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.121862032, y: .24000001}
-      - {x: -.122950695, y: .00311760907}
-      - {x: -.359999985, y: .0018620491}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .120350517, y: -.239999995}
-      - {x: .120258681, y: -.00127511029}
-      - {x: .359999985, y: -.00186202524}
-      - {x: .359999985, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: .119999997}
 --- !u!212 &536363347
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1760,6 +1783,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &536363349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 1829647775}
+  m_GameObject: {fileID: 536363344}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: -.119999997}
 --- !u!1001 &558885662
 Prefab:
   m_ObjectHideFlags: 0
@@ -2166,8 +2201,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 719247410}
   - 212: {fileID: 719247409}
-  - 60: {fileID: 719247408}
   - 114: {fileID: 719247407}
+  - 61: {fileID: 719247411}
+  - 61: {fileID: 719247408}
   m_Layer: 0
   m_Name: tetris_6
   m_TagString: Pecas
@@ -2188,26 +2224,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &719247408
-PolygonCollider2D:
+--- !u!61 &719247408
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
     type: 2}
   m_PrefabInternal: {fileID: 916555680}
   m_GameObject: {fileID: 719247406}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.359999985, y: .239999995}
-      - {x: -.359999985, y: .00102689269}
-      - {x: -.122908883, y: .00139815814}
-      - {x: -.121976934, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .360000014, y: .00197694311}
-      - {x: .119636849, y: .00205519213}
-      - {x: .118973099, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: .119999997}
 --- !u!212 &719247409
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2243,6 +2271,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &719247411
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+    type: 2}
+  m_PrefabInternal: {fileID: 916555680}
+  m_GameObject: {fileID: 719247406}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: -.119999997}
 --- !u!1001 &753340684
 Prefab:
   m_ObjectHideFlags: 0
@@ -2671,8 +2711,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 882332199}
   - 212: {fileID: 882332198}
-  - 60: {fileID: 882332197}
   - 114: {fileID: 882332196}
+  - 61: {fileID: 882332200}
+  - 61: {fileID: 882332197}
   m_Layer: 0
   m_Name: tetris_5
   m_TagString: Pecas
@@ -2693,26 +2734,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &882332197
-PolygonCollider2D:
+--- !u!61 &882332197
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
     type: 2}
   m_PrefabInternal: {fileID: 1951917570}
   m_GameObject: {fileID: 882332195}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.120435141, y: .241222784}
-      - {x: -.120504856, y: .00148463249}
-      - {x: -.359999985, y: .00165801647}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .358777136, y: .00410362193}
-      - {x: .11771784, y: .00313143735}
-      - {x: .117989637, y: .239999995}
+  m_Size: {x: .239999995, y: .239999995}
+  m_Center: {x: 0, y: .119999997}
 --- !u!212 &882332198
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2748,6 +2781,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &882332200
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1951917570}
+  m_GameObject: {fileID: 882332195}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .720000029, y: .239999995}
+  m_Center: {x: 0, y: -.119999997}
 --- !u!1001 &916555680
 Prefab:
   m_ObjectHideFlags: 0
@@ -2945,8 +2990,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1172609824}
   - 212: {fileID: 1172609823}
-  - 60: {fileID: 1172609822}
   - 114: {fileID: 1172609821}
+  - 61: {fileID: 1172609825}
+  - 61: {fileID: 1172609822}
   m_Layer: 0
   m_Name: tetris_4
   m_TagString: Pecas
@@ -2967,26 +3013,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &1172609822
-PolygonCollider2D:
+--- !u!61 &1172609822
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+  m_PrefabParentObject: {fileID: 6100000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
     type: 2}
   m_PrefabInternal: {fileID: 4903919}
   m_GameObject: {fileID: 1172609820}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.121862032, y: .24000001}
-      - {x: -.122950695, y: .00311760907}
-      - {x: -.359999985, y: .0018620491}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .120350517, y: -.239999995}
-      - {x: .120258681, y: -.00127511029}
-      - {x: .359999985, y: -.00186202524}
-      - {x: .359999985, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: .119999997}
 --- !u!212 &1172609823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3022,6 +3060,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &1172609825
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 4903919}
+  m_GameObject: {fileID: 1172609820}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: -.119999997}
 --- !u!1 &1231225841
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,8 +3703,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1418369446}
   - 212: {fileID: 1418369445}
-  - 60: {fileID: 1418369444}
   - 114: {fileID: 1418369443}
+  - 61: {fileID: 1418369447}
+  - 61: {fileID: 1418369444}
   m_Layer: 0
   m_Name: tetris_5
   m_TagString: Pecas
@@ -3675,26 +3726,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &1418369444
-PolygonCollider2D:
+--- !u!61 &1418369444
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
     type: 2}
   m_PrefabInternal: {fileID: 1639677121}
   m_GameObject: {fileID: 1418369442}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.120435141, y: .241222784}
-      - {x: -.120504856, y: .00148463249}
-      - {x: -.359999985, y: .00165801647}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .358777136, y: .00410362193}
-      - {x: .11771784, y: .00313143735}
-      - {x: .117989637, y: .239999995}
+  m_Size: {x: .239999995, y: .239999995}
+  m_Center: {x: 0, y: .119999997}
 --- !u!212 &1418369445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3730,6 +3773,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &1418369447
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1639677121}
+  m_GameObject: {fileID: 1418369442}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .720000029, y: .239999995}
+  m_Center: {x: 0, y: -.119999997}
 --- !u!1 &1447535697
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,8 +5140,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1535862157}
   - 212: {fileID: 1535862156}
-  - 60: {fileID: 1535862155}
   - 114: {fileID: 1535862154}
+  - 61: {fileID: 1535862158}
+  - 61: {fileID: 1535862155}
   m_Layer: 0
   m_Name: tetris_6
   m_TagString: Pecas
@@ -5107,26 +5163,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &1535862155
-PolygonCollider2D:
+--- !u!61 &1535862155
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 22b0aacabec0cc84aaacc28998c48ab1,
     type: 2}
   m_PrefabInternal: {fileID: 1892194795}
   m_GameObject: {fileID: 1535862153}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.359999985, y: .239999995}
-      - {x: -.359999985, y: .00102689269}
-      - {x: -.122908883, y: .00139815814}
-      - {x: -.121976934, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .360000014, y: .00197694311}
-      - {x: .119636849, y: .00205519213}
-      - {x: .118973099, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: .119999997}
 --- !u!212 &1535862156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5162,6 +5210,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &1535862158
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 22b0aacabec0cc84aaacc28998c48ab1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1892194795}
+  m_GameObject: {fileID: 1535862153}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: -.119999997}
 --- !u!1001 &1593366825
 Prefab:
   m_ObjectHideFlags: 0
@@ -5211,8 +5271,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1596737587}
   - 212: {fileID: 1596737586}
-  - 60: {fileID: 1596737585}
   - 114: {fileID: 1596737584}
+  - 61: {fileID: 1596737588}
+  - 61: {fileID: 1596737585}
   m_Layer: 0
   m_Name: tetris_4
   m_TagString: Pecas
@@ -5233,26 +5294,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &1596737585
-PolygonCollider2D:
+--- !u!61 &1596737585
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+  m_PrefabParentObject: {fileID: 6100000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
     type: 2}
   m_PrefabInternal: {fileID: 753340684}
   m_GameObject: {fileID: 1596737583}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.121862032, y: .24000001}
-      - {x: -.122950695, y: .00311760907}
-      - {x: -.359999985, y: .0018620491}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .120350517, y: -.239999995}
-      - {x: .120258681, y: -.00127511029}
-      - {x: .359999985, y: -.00186202524}
-      - {x: .359999985, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: .119999997}
 --- !u!212 &1596737586
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5288,6 +5341,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &1596737588
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 753340684}
+  m_GameObject: {fileID: 1596737583}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: -.119999997}
 --- !u!1 &1611595701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6105,8 +6170,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1930735130}
   - 212: {fileID: 1930735129}
-  - 60: {fileID: 1930735128}
   - 114: {fileID: 1930735127}
+  - 61: {fileID: 1930735131}
+  - 61: {fileID: 1930735128}
   m_Layer: 0
   m_Name: tetris_5
   m_TagString: Pecas
@@ -6127,26 +6193,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &1930735128
-PolygonCollider2D:
+--- !u!61 &1930735128
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+  m_PrefabParentObject: {fileID: 6100000, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
     type: 2}
   m_PrefabInternal: {fileID: 280075314}
   m_GameObject: {fileID: 1930735126}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.120435141, y: .241222784}
-      - {x: -.120504856, y: .00148463249}
-      - {x: -.359999985, y: .00165801647}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .359999985, y: -.239999995}
-      - {x: .358777136, y: .00410362193}
-      - {x: .11771784, y: .00313143735}
-      - {x: .117989637, y: .239999995}
+  m_Size: {x: .239999995, y: .239999995}
+  m_Center: {x: 0, y: .119999997}
 --- !u!212 &1930735129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6182,6 +6240,18 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &1930735131
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 98f41ca60fe97014c9b284f62f6f2cf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 280075314}
+  m_GameObject: {fileID: 1930735126}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .720000029, y: .239999995}
+  m_Center: {x: 0, y: -.119999997}
 --- !u!1001 &1935076074
 Prefab:
   m_ObjectHideFlags: 0
@@ -6271,8 +6341,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1953806224}
   - 212: {fileID: 1953806223}
-  - 60: {fileID: 1953806222}
   - 114: {fileID: 1953806221}
+  - 61: {fileID: 1953806225}
+  - 61: {fileID: 1953806222}
   m_Layer: 0
   m_Name: tetris_4
   m_TagString: Pecas
@@ -6293,26 +6364,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cell_size: .300000012
---- !u!60 &1953806222
-PolygonCollider2D:
+--- !u!61 &1953806222
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6000000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+  m_PrefabParentObject: {fileID: 6100000, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
     type: 2}
   m_PrefabInternal: {fileID: 853734412}
   m_GameObject: {fileID: 1953806220}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -.121862032, y: .24000001}
-      - {x: -.122950695, y: .00311760907}
-      - {x: -.359999985, y: .0018620491}
-      - {x: -.359999985, y: -.239999995}
-      - {x: .120350517, y: -.239999995}
-      - {x: .120258681, y: -.00127511029}
-      - {x: .359999985, y: -.00186202524}
-      - {x: .359999985, y: .239999995}
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: .119999997, y: .119999997}
 --- !u!212 &1953806223
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6348,3 +6411,15 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!61 &1953806225
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 457be4be13b69ce47b50a5e75b9fe5ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 853734412}
+  m_GameObject: {fileID: 1953806220}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .479999989, y: .239999995}
+  m_Center: {x: -.119999997, y: -.119999997}

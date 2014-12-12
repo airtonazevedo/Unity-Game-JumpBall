@@ -67,6 +67,11 @@ public class MapaLevel_inf : MonoBehaviour {
 			Debug.Log(SelectedLevelNumber.ToString());
 		}
 	}
+
+    void Estrelas()
+    {
+        Application.LoadLevel(0);
+    }
 	/*
 	private void OnNoButtonClick(object sender, EventArgs e)
 	{

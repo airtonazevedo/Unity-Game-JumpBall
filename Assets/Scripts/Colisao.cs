@@ -45,6 +45,28 @@ public class Colisao : MonoBehaviour {
                     }
                 }
             }
+        }
+
+        if (collision.collider.CompareTag("Pecacai"))
+        {
+            foreach (var item in collision.contacts)
+            {
+                if (item.normal.x == 0)
+                {
+                    collision.gameObject.rigidbody2D.gravityScale = 1;
+                    collision.gameObject.collider2D.isTrigger = true;
+                    transform.parent.SendMessage("PecasColisao");
+                }
+                else
+                {
+                    if (item.normal.y > 0.7f)
+                    {
+                    collision.gameObject.rigidbody2D.gravityScale = 1;
+                    collision.gameObject.collider2D.isTrigger = true;
+                        transform.parent.SendMessage("PecasColisao");
+                    }
+                }
+            }
 
         }
         if (collision.collider.CompareTag("Up"))

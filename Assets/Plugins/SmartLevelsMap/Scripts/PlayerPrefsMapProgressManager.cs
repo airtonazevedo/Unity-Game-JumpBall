@@ -75,6 +75,22 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 			Iniciar();
         }
 
+        public static void Zerar()
+        {
+            if (File.Exists(Application.persistentDataPath + "/savedGames.xml"))
+            {
+                File.Delete(Application.persistentDataPath + "/savedGames.xml");
+                fases.Clear();
+            }
+            for (int i = 1; i < 20; i++)
+            {
+
+                fases.Add(new FaseClass("Fase" + i.ToString(), 10, true, true, true, true));
+
+            }
+            Save();
+        }
+
 		public static void Iniciar()
 		{
 			fases.Add (new FaseClass ("Fase1", -1, false, false, false, true));
