@@ -10,6 +10,7 @@ public class GameplayScript : MonoBehaviour {
     public GameObject Estrelab;
     public GameObject Estrelac;
     public string proximafase = "Fase";
+    public GameObject Fundao;
 
     private bool _segurabotaod, _segurabotaol, subir, _vence, _melhortempo, _validatempo;
     private float _velocidade, _velocidadepulo;
@@ -20,12 +21,14 @@ public class GameplayScript : MonoBehaviour {
     private string temporeal;
     private bool[] estrelas = new bool[3];
 
+
    
 	// Use this for initialization
 	void Start () {
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
         Bola.GetComponent<SpriteRenderer>().sprite = tex;
-       // Bola.sprite = tex;
+        tex = Resources.Load("Fundo" +  UnityEngine.Random.Range(1, 9).ToString(), typeof(Sprite)) as Sprite;
+        Fundao.GetComponent<SpriteRenderer>().sprite = tex;
 
         _pos = Vector3.zero;
         _segurabotaod = false;

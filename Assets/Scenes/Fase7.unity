@@ -3432,6 +3432,7 @@ MonoBehaviour:
   Estrelab: {fileID: 1926856064}
   Estrelac: {fileID: 1512057899}
   proximafase: Fase8
+  Fundao: {fileID: 1650418935}
 --- !u!4 &2114349475
 Transform:
   m_ObjectHideFlags: 0

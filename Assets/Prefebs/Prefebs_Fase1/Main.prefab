@@ -686,6 +686,7 @@ MonoBehaviour:
   Estrelab: {fileID: 100016}
   Estrelac: {fileID: 100022}
   proximafase: Fase
+  Fundao: {fileID: 100024}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
