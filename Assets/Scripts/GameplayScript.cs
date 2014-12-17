@@ -10,9 +10,11 @@ public class GameplayScript : MonoBehaviour {
     public GameObject Estrelab;
     public GameObject Estrelac;
     public string proximafase = "Fase";
+    public string[] Bonus;
+
     public GameObject Fundao;
 
-    private bool _segurabotaod, _segurabotaol, subir, _vence, _melhortempo, _validatempo;
+    private bool _segurabotaod, _segurabotaol, subir, _vence, _melhortempo, _validatempo, _vence2;
     private float _velocidade, _velocidadepulo;
     private Vector3 _bolaini, _pos;
     private Sprite tex;
@@ -20,11 +22,12 @@ public class GameplayScript : MonoBehaviour {
     public static float temp;
     private string temporeal;
     private bool[] estrelas = new bool[3];
-
+   
 
    
 	// Use this for initialization
 	void Start () {
+        Time.timeScale = 1;
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
         Bola.GetComponent<SpriteRenderer>().sprite = tex;
         tex = Resources.Load("Fundo" +  UnityEngine.Random.Range(1, 9).ToString(), typeof(Sprite)) as Sprite;
@@ -35,6 +38,7 @@ public class GameplayScript : MonoBehaviour {
         _velocidade = 2.5f;
         _segurabotaol = false;
         _vence = false;
+        _vence2 = false;
         _bolaini = Bola.transform.position;
         temp = 0;
         _contavence = 1;
@@ -43,7 +47,6 @@ public class GameplayScript : MonoBehaviour {
         estrelas[1] = false;
         estrelas[2] = false;
         _validatempo = true;
-      
 
         foreach (var item in Banco.fases)
         {
@@ -155,6 +158,13 @@ public class GameplayScript : MonoBehaviour {
         //Application.LoadLevel(2);
     }
 
+    void Vencer2()
+    {
+        _vence2 = true;
+        Vencer();
+        //Application.LoadLevel(2);
+    }
+
 
     void playmouse()
     {
@@ -247,6 +257,7 @@ public class GameplayScript : MonoBehaviour {
     }
 
 	void Update () {
+
          playmouse();
          playteclado();
         
@@ -278,6 +289,8 @@ public class GameplayScript : MonoBehaviour {
              {
                  foreach (var item in Banco.fases)
                  {
+
+                     Debug.Log("foi");
                      if (item.fase == _fase.fase)
                      {
                          item.estrela1 = _fase.estrela1;
@@ -290,11 +303,22 @@ public class GameplayScript : MonoBehaviour {
                          achou = true;
                          
                      }
-					if (item.fase == proximafase)
+
+                   if (item.fase == proximafase && !_vence2)
 					{
 						item.aberta = true;
 
 					}
+                   else if (Bonus.Length > 0) 
+                   { 
+                      if (item.fase == Bonus[0])
+                      {
+                        item.aberta = true;
+                  
+                      }
+                 }
+
+					
                  }
                  if (!achou)
                  {

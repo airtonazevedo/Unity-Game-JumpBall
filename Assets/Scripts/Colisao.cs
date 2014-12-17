@@ -20,10 +20,11 @@ public class Colisao : MonoBehaviour {
 
             transform.parent.SendMessage("Vencer");   
         }
-        if (collision.collider.CompareTag("Agua"))
+        if (collision.collider.CompareTag("Player2"))
         {
-                
-         } 
+
+            transform.parent.SendMessage("Vencer2");
+        }
         if (collision.collider.CompareTag("Bola"))
         {
              transform.parent.SendMessage("Reiniciar");

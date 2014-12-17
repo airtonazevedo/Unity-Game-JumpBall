@@ -2334,6 +2334,8 @@ MonoBehaviour:
   Estrelab: {fileID: 1214616280}
   Estrelac: {fileID: 1812153258}
   proximafase: Fase3
+  Bonus: []
+  Fundao: {fileID: 2108254759}
 --- !u!1001 &1295881575
 Prefab:
   m_ObjectHideFlags: 0
