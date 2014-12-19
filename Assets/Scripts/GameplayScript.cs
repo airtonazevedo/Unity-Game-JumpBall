@@ -290,7 +290,6 @@ public class GameplayScript : MonoBehaviour {
                  foreach (var item in Banco.fases)
                  {
 
-                     Debug.Log("foi");
                      if (item.fase == _fase.fase)
                      {
                          item.estrela1 = _fase.estrela1;
@@ -300,19 +299,22 @@ public class GameplayScript : MonoBehaviour {
                          {
                              item.tempo = _fase.tempo;
                          }
-                         achou = true;
+                        
                          
                      }
 
                    if (item.fase == proximafase && !_vence2)
 					{
+                        Debug.Log("fora");
 						item.aberta = true;
+
 
 					}
                    else if (Bonus.Length > 0) 
                    { 
-                      if (item.fase == Bonus[0])
+                      if (item.fase == Bonus[0] && _vence2)
                       {
+                          Debug.Log("nao fora");
                         item.aberta = true;
                   
                       }
@@ -320,11 +322,7 @@ public class GameplayScript : MonoBehaviour {
 
 					
                  }
-                 if (!achou)
-                 {
-                     Banco.fases.Add(_fase);
-                 }
-                 Banco.Save();
+                  Banco.Save();
            
              }
              catch { Debug.Log("errão"); }

@@ -22,8 +22,7 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 
         public void SaveLevelStarsCount(int level, int starsCount)
         {
-            Debug.Log("onde chama?");
-            PlayerPrefs.SetInt(GetLevelKey(level), starsCount);
+             PlayerPrefs.SetInt(GetLevelKey(level), starsCount);
         }
 
         public void ClearLevelProgress(int level)
@@ -82,6 +81,7 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
                 File.Delete(Application.persistentDataPath + "/savedGames.xml");
                 fases.Clear();
             }
+           
             for (int i = 1; i < 20; i++)
             {
 
@@ -96,11 +96,18 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 			fases.Add (new FaseClass ("Fase1", -1, false, false, false, true));
 
 			for (int i = 2; i<20; i++) {
-				
-				fases.Add (new FaseClass ("Fase" + i.ToString(), -1, false, false, false, false));
-				
+                if (i < 11)
+                {
+                    fases.Add(new FaseClass("Fase" + i.ToString(), -1, false, false, false, false));
+                }
+                else 
+                {
+                    fases.Add(new FaseClass("Fase" + i.ToString(), -1, false, false, false, false));
+                
+                }
 			}
-			Save();
+            
+          	Save();
 
 		}
 
