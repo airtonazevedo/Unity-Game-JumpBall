@@ -1388,11 +1388,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.46178675
+      value: 4.01776314
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.58671284
+      value: 1.39641702
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1414,26 +1414,6 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 100008, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100014, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
-      propertyPath: Number
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100016, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_Name
       value: Level11
@@ -1446,6 +1426,15 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
       value: Fase11
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a7f1176e55baac4b9463f49546959e5,
+        type: 3}
+    - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: Number
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
@@ -3013,7 +3002,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 523dda8ca81dab142a4628a8538901b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b59a53bd06d128f4a819ddc3653592d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &629192414
 GameObject:
@@ -3672,7 +3661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &789006509
 Transform:
   m_ObjectHideFlags: 0
@@ -4969,6 +4958,11 @@ Prefab:
       propertyPath: SceneName
       value: Fase10
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b59a53bd06d128f4a819ddc3653592d7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
   m_RootGameObject: {fileID: 582800675}
@@ -5525,7 +5519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1246676282
 Transform:
   m_ObjectHideFlags: 0
@@ -5921,7 +5915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1348195237
 Transform:
   m_ObjectHideFlags: 0
@@ -7432,7 +7426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1695513938
 Transform:
   m_ObjectHideFlags: 0
@@ -8923,7 +8917,7 @@ Transform:
   m_PrefabInternal: {fileID: 245073505}
   m_GameObject: {fileID: 2141323733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.46178675, y: 1.58671284, z: -1}
+  m_LocalPosition: {x: 4.01776314, y: 1.39641702, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1094701467}
@@ -8994,5 +8988,5 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 523dda8ca81dab142a4628a8538901b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a7f1176e55baac4b9463f49546959e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
