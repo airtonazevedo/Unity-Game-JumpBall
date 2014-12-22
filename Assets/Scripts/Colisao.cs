@@ -29,7 +29,7 @@ public class Colisao : MonoBehaviour {
         {
              transform.parent.SendMessage("Reiniciar");
         }
-        if (collision.collider.CompareTag("Pecas"))
+        if (collision.collider.CompareTag("Pecas") || collision.collider.CompareTag("BotaoAmarelo"))
         {
             foreach (var item in collision.contacts)
             {
@@ -54,6 +54,7 @@ public class Colisao : MonoBehaviour {
             {
                 if (item.normal.x == 0)
                 {
+                    collision.gameObject.rigidbody2D.isKinematic = false;
                     collision.gameObject.rigidbody2D.gravityScale = 1;
                     collision.gameObject.collider2D.isTrigger = true;
                     transform.parent.SendMessage("PecasColisao");
@@ -62,6 +63,8 @@ public class Colisao : MonoBehaviour {
                 {
                     if (item.normal.y > 0.7f)
                     {
+
+                        collision.gameObject.rigidbody2D.isKinematic = false;
                     collision.gameObject.rigidbody2D.gravityScale = 1;
                     collision.gameObject.collider2D.isTrigger = true;
                         transform.parent.SendMessage("PecasColisao");
@@ -119,6 +122,11 @@ public class Colisao : MonoBehaviour {
             colisor.gameObject.renderer.enabled = false;
             transform.parent.SendMessage("Estrela3");
         }
+        if (colisor.CompareTag("Escada"))
+        {
+            transform.parent.SendMessage("PecasColisao");
+        }
+
 
     }
 
