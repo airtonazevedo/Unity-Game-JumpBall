@@ -5,7 +5,6 @@ public class Colisao : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 
     void OnCollisionEnter2D(Collision2D collision)

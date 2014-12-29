@@ -33,54 +33,20 @@ public class EditorGrid : MonoBehaviour
             y = Mathf.Round(this.transform.position.y / cell_size) * cell_size;
 
             this.transform.position = new Vector3(x, y, z);
-       /*
-            if (id == 0)
+
+             
+            if (this.transform.localEulerAngles.z % 90 > 45)
             {
-
+                this.transform.Rotate(0, 0, 90 - this.transform.localEulerAngles.z % 90);
+       
             }
-            if (id == 1)
+            else if (this.transform.localEulerAngles.z % 90 < 45 && this.transform.localEulerAngles.z % 90 > 0)
             {
-                if (y != this.transform.position.y)
-                {
-
-                    y = Mathf.Round(this.transform.position.y / cell_size) * cell_size + cell_size / 2;
-
-                }
-                x = Mathf.Round(this.transform.position.x / cell_size) * cell_size;
-
-                this.transform.position = new Vector3(x, y, z);
+                this.transform.Rotate(0, 0,- this.transform.localEulerAngles.z % 90);
+       
             }
-            if (id == 2)
-            {
-                if (x != this.transform.position.x)
-                {
-                    x = Mathf.Round(this.transform.position.x / cell_size) * cell_size + cell_size / 2;
-                }
-                y = Mathf.Round(this.transform.position.y / cell_size) * cell_size;
-
-                this.transform.position = new Vector3(x, y, z);
-
-            }
-            if (id == 3)
-            {
-                if (y != this.transform.position.y)
-                {
-                    y = Mathf.Round(this.transform.position.y / cell_size) * cell_size + cell_size / 2;
-                }
-                if (x != this.transform.position.x)
-                {
-                    x = Mathf.Round(this.transform.position.x / cell_size) * cell_size + cell_size / 2;
-                }
-
-                this.transform.position = new Vector3(x, y, z);
-            }
-            if (gameObject.tag == "Andador")
-            {
-              //  ((BoxCollider2D)gameObject.collider2D).size = new Vector2(30, 30);
-                Debug.Log(gameObject.tag);
-            }
-             */
-        }
+            
+         }
 
 
     }

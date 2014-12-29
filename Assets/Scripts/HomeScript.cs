@@ -11,7 +11,8 @@ public class HomeScript : MonoBehaviour {
     private GameObject Bola;
 
 	// Use this for initialization
-	void Start () {
+    void Start()
+    {
         Time.timeScale = 1;
 
         _bolaini = Vector3.zero;
@@ -24,7 +25,12 @@ public class HomeScript : MonoBehaviour {
         Bola.rigidbody2D.gravityScale = 0;
         Bola.transform.parent = transform;
         Banco.Load();
-	}
+
+        if (!PlayerPrefs.HasKey("Vidas")) 
+        {
+            PlayerPrefs.SetInt("Vidas", 100);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
