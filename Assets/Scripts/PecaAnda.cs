@@ -11,6 +11,9 @@ public class PecaAnda : MonoBehaviour {
     {
         if (other.CompareTag("Andador"))
         {
+
+            Debug.Log("foi");
+     
             sentido *= -1;
             if (vertical)
             {

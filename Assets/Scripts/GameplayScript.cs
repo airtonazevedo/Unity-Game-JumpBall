@@ -4,14 +4,14 @@ using System;
 using Assets.Plugins.SmartLevelsMap.Scripts;
 
 public class GameplayScript : MonoBehaviour {
-    public GameObject Bola;
+    private GameObject Bola;
     public GUIText Tempo;
-    public GameObject Estrelaa;
-    public GameObject Estrelab;
-    public GameObject Estrelac;
+    private GameObject Estrelaa;
+    private GameObject Estrelab;
+    private GameObject Estrelac;
     public string proximafase = "Fase";
     public string[] Bonus;
-
+ 
     public GameObject Fundao;
 
     private bool _segurabotaod, _segurabotaol, subir, _vence, _melhortempo, _validatempo, _vence2;
@@ -27,6 +27,38 @@ public class GameplayScript : MonoBehaviour {
    
 	// Use this for initialization
 	void Start () {
+        if (PlayerPrefs.GetInt("Vidas") < 1)
+        {
+            PlayerPrefs.SetInt("Vidas", 0);
+            Application.LoadLevel("Mapa_Fases");
+        }
+        
+        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") - 1);
+
+        
+
+        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+        foreach (GameObject Pecas in GameObjects)
+        {
+            switch (Pecas.tag){
+                case "Bola" : 
+                    Bola = Pecas;
+                    break;
+                case "Estrela":
+                    Estrelaa = Pecas;
+                    break;
+                case "Estrela2":
+                    Estrelab = Pecas;
+                    break;
+                case "Estrela3":
+                    Estrelac = Pecas;
+                    break;
+                
+            }
+        }
+
+        Bola.transform.parent = this.transform;
+
         Time.timeScale = 1;
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
         Bola.GetComponent<SpriteRenderer>().sprite = tex;
@@ -138,7 +170,7 @@ public class GameplayScript : MonoBehaviour {
 
     void Reiniciar()
     {
-
+        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") - 4);
         Bola.renderer.enabled = false;
         Bola.collider2D.isTrigger = true;
         Time.timeScale = 0;
@@ -277,7 +309,6 @@ public class GameplayScript : MonoBehaviour {
              _validatempo = false;
 
              FaseClass _fase = new FaseClass(Application.loadedLevelName, temp, estrelas[0], estrelas[1], estrelas[2], true);
-             bool achou = false;
             
              Debug.Log(_fase.ToString());
              if (estrelas[0]) { nestrelas++; }
@@ -305,7 +336,7 @@ public class GameplayScript : MonoBehaviour {
 
                    if (item.fase == proximafase && !_vence2)
 					{
-                        Debug.Log("fora");
+
 						item.aberta = true;
 
 
@@ -341,7 +372,9 @@ public class GameplayScript : MonoBehaviour {
 
     public static void DoChooseLevels()
     {
+        
         Time.timeScale = 1;
+      
         Application.LoadLevel("Mapa_Fases");
     }
 
@@ -355,6 +388,7 @@ public class GameplayScript : MonoBehaviour {
     public static void DoNextLevel()
     {
         Time.timeScale = 1;
+      
         Application.LoadLevel("Mapa_Fases");
   
     }

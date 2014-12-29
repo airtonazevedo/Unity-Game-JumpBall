@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 4aae22bb6adccf84cbc6fc6d8fd1af13
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Ponto: {fileID: 100000, guid: e882d36a255f3f34ab761101a92a7575, type: 2}
+  - Move: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

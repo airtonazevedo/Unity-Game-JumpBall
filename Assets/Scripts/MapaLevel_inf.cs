@@ -9,6 +9,11 @@ public class MapaLevel_inf : MonoBehaviour {
 	// Use this for initialization
 	void OnEnable()
 	{
+        if (PlayerPrefs.GetInt("Vidas") < 1)
+        {
+            PlayerPrefs.SetInt("Vidas", 0);
+        }
+      
 	//	Debug.Log("Subscribe to events.");
 		LevelsMap.LevelSelected += OnLevelSelected;
 
@@ -35,7 +40,8 @@ public class MapaLevel_inf : MonoBehaviour {
 		y = Screen.height / 2 - w / 2 + y1*Screen.height;
 
 		fonte *= Screen.width;
-		//Debug.Log (fonte.ToString ());
+
+        texto1 = PlayerPrefs.GetInt("Vidas").ToString();
 		texto3 = Banco.TotalDeEstrelas().ToString();
 
 		GUI.Label (new Rect (x, y, w*2, h), "<size=" + fonte.ToString () + ">" + texto1 + "</size>");
@@ -89,6 +95,9 @@ public class MapaLevel_inf : MonoBehaviour {
 	
 	}
 
-
+    void Vidas()
+    {
+        PlayerPrefs.SetInt("Vidas", 100);
+    }
 
 }
