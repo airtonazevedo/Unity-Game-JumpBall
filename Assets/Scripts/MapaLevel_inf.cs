@@ -1,11 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Plugins.SmartLevelsMap.Scripts;
+using System;
 
 [ExecuteInEditMode]
 public class MapaLevel_inf : MonoBehaviour {
 
-
+    public GameObject Tempo;
+    public GameObject Fase;
+    public GameObject Estrela1;
+    public GameObject Estrela2;
+    public GameObject Estrela3;
+    public GameObject Confirmacao;
+    public GameObject lll;
+    private int SelectedLevelNumber;
+		  
 	// Use this for initialization
 	void OnEnable()
 	{
@@ -64,13 +73,48 @@ public class MapaLevel_inf : MonoBehaviour {
 
 	private void OnLevelSelected(object sender, LevelReachedEventArgs e)
 	{
-		Debug.Log("asdd");
+
 		if (LevelsMap.GetIsConfirmationEnabled())
-		{
-			int SelectedLevelNumber = e.Number;
-		//	e.
-			//ConfirmationView.SetActive(true);
-			Debug.Log(SelectedLevelNumber.ToString());
+        {
+          //  lll.SetActive(false);
+            Confirmacao.SetActive(true);
+			SelectedLevelNumber = e.Number;
+		    Fase.GetComponent<TextMesh>().text = "Fase " + SelectedLevelNumber.ToString();
+            Tempo.GetComponent<TextMesh>().text = String.Format("{0:0.00}", Banco.fases[SelectedLevelNumber - 1].tempo);
+            if (Banco.fases[SelectedLevelNumber - 1].NumeroDeEstrelas() == 0)
+            {
+                Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+                Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+                Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+
+            }
+            if(Banco.fases[SelectedLevelNumber-1].NumeroDeEstrelas() == 1)
+            {
+                Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaD", typeof(Sprite)) as Sprite;
+                Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+                Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+           
+           
+            }
+            if (Banco.fases[SelectedLevelNumber - 1].NumeroDeEstrelas() == 2)
+            {
+                Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaD", typeof(Sprite)) as Sprite;
+                Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaD", typeof(Sprite)) as Sprite;
+                Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+           
+            }
+            if (Banco.fases[SelectedLevelNumber - 1].NumeroDeEstrelas() == 3)
+            {
+                Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaD", typeof(Sprite)) as Sprite;
+                Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaD", typeof(Sprite)) as Sprite;
+                Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaD", typeof(Sprite)) as Sprite;
+            }
+            if (Banco.fases[SelectedLevelNumber - 1].tempo == -1)
+            {
+                Tempo.GetComponent<TextMesh>().text = "  ";
+         
+            }
+			
 		}
 	}
 
@@ -92,7 +136,36 @@ public class MapaLevel_inf : MonoBehaviour {
 */
 	// Update is called once per frame
 	void Update () {
-	
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
+             try
+            {
+                if (hitCollider.name == "BotaoVerde")
+                {
+                  //  lll.SetActive(true);
+          
+                    Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+                Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+                Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+
+                Confirmacao.SetActive(false);
+                   LevelsMap.GoToLevel(SelectedLevelNumber);
+                 }
+                if (hitCollider.name == "X1")
+                {
+                    //lll.SetActive(true);
+          
+                    Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+                    Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+                    Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
+
+                    Confirmacao.SetActive(false);
+                }
+            }
+            catch { }
+        }
 	}
 
     void Vidas()

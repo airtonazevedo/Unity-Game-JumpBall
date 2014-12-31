@@ -48,7 +48,7 @@ public class TrilhoNovo : MonoBehaviour {
 #endif
 
 }
-    void OnTriggerExit2D(Collider2D colisor)
+    void OnTriggerEnter2D(Collider2D colisor)
     {
          for (int i = 0; i < pontos.Count; i++)
         {

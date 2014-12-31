@@ -1,14 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TrilhoNovoA : MonoBehaviour {
+public class Sensor : MonoBehaviour {
 
-
-	
-	public void BuildObject()
-	{
-        Debug.Log("asd");
-	}
 	// Use this for initialization
 	void Start () {
 	
@@ -18,4 +12,6 @@ public class TrilhoNovoA : MonoBehaviour {
 	void Update () {
 	
 	}
+
+
 }

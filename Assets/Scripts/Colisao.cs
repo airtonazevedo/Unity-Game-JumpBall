@@ -99,6 +99,10 @@ public class Colisao : MonoBehaviour {
         {
               transform.parent.SendMessage("Reiniciar");
         }
+        if (colisor.CompareTag("Sensor"))
+        {
+            colisor.gameObject.rigidbody2D.isKinematic = false;
+        }
         if (colisor.CompareTag("Agua"))
         {
             Debug.Log("lalalala");
