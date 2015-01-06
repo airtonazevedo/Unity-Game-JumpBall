@@ -227,8 +227,11 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
         {
             MapLevel mapLevel = GetLevel(number);
             if (!string.IsNullOrEmpty(mapLevel.SceneName))
-                Application.LoadLevel(mapLevel.SceneName);
-
+            {
+                //Efeito
+                AutoFade.LoadLevel(mapLevel.SceneName, 0.25f, 0.3f, Color.black);
+                // Application.LoadLevel(mapLevel.SceneName);
+            }
             if (LevelReached != null)
                 LevelReached(this, new LevelReachedEventArgs(number));
         }

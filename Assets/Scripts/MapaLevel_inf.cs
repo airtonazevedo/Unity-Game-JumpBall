@@ -6,13 +6,15 @@ using System;
 [ExecuteInEditMode]
 public class MapaLevel_inf : MonoBehaviour {
 
+	public Camera CM;
     public GameObject Tempo;
     public GameObject Fase;
     public GameObject Estrela1;
     public GameObject Estrela2;
     public GameObject Estrela3;
     public GameObject Confirmacao;
-    public GameObject lll;
+    public GameObject Confirmacao2;
+
     private int SelectedLevelNumber;
 		  
 	// Use this for initialization
@@ -21,7 +23,9 @@ public class MapaLevel_inf : MonoBehaviour {
         if (PlayerPrefs.GetInt("Vidas") < 1)
         {
             PlayerPrefs.SetInt("Vidas", 0);
+            Confirmacao2.SetActive(true);
         }
+
       
 	//	Debug.Log("Subscribe to events.");
 		LevelsMap.LevelSelected += OnLevelSelected;
@@ -74,9 +78,9 @@ public class MapaLevel_inf : MonoBehaviour {
 	private void OnLevelSelected(object sender, LevelReachedEventArgs e)
 	{
 
-		if (LevelsMap.GetIsConfirmationEnabled())
+		if (LevelsMap.GetIsConfirmationEnabled() && !LevelsMap.IsLevelLocked(e.Number) && PlayerPrefs.GetInt("Vidas") > 0)
         {
-          //  lll.SetActive(false);
+		
             Confirmacao.SetActive(true);
 			SelectedLevelNumber = e.Number;
 		    Fase.GetComponent<TextMesh>().text = "Fase " + SelectedLevelNumber.ToString();
@@ -116,36 +120,29 @@ public class MapaLevel_inf : MonoBehaviour {
             }
 			
 		}
+        else if (PlayerPrefs.GetInt("Vidas") == 0)
+        {
+            Confirmacao2.SetActive(true);
+        }
 	}
 
     void Estrelas()
     {
         Application.LoadLevel(0);
     }
-	/*
-	private void OnNoButtonClick(object sender, EventArgs e)
-	{
-		ConfirmationView.SetActive(false);
-	}
 	
-	private void OnYesButtonClick(object sender, EventArgs e)
-	{
-		ConfirmationView.SetActive(false);
-		LevelsMap.GoToLevel(SelectedLevelNumber);
-	}
-*/
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector2 mousePosition = CM.ScreenToWorldPoint(Input.mousePosition);
             Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
              try
             {
-                if (hitCollider.name == "BotaoVerde")
+			    if (hitCollider.name == "BotaoJogar")
                 {
-                  //  lll.SetActive(true);
-          
+            
                     Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
                 Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
                 Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
@@ -155,7 +152,7 @@ public class MapaLevel_inf : MonoBehaviour {
                  }
                 if (hitCollider.name == "X1")
                 {
-                    //lll.SetActive(true);
+                    Confirmacao2.SetActive(false);
           
                     Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
                     Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
@@ -163,6 +160,21 @@ public class MapaLevel_inf : MonoBehaviour {
 
                     Confirmacao.SetActive(false);
                 }
+                if (hitCollider.name == "BotaoVidasGratis")
+                {
+
+                    Debug.Log("Video ganha vidas");
+                    PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
+                    Confirmacao2.SetActive(false);
+                }
+                if (hitCollider.name == "BotaoComprarVidas")
+                {
+                    Debug.Log("Comprar vidas");
+                    PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 100);
+                    Confirmacao2.SetActive(false);
+                    
+                }
+
             }
             catch { }
         }
@@ -170,7 +182,9 @@ public class MapaLevel_inf : MonoBehaviour {
 
     void Vidas()
     {
-        PlayerPrefs.SetInt("Vidas", 100);
+        Confirmacao2.SetActive(true);
     }
+
+   
 
 }

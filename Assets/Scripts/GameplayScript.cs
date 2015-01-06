@@ -30,7 +30,8 @@ public class GameplayScript : MonoBehaviour {
         if (PlayerPrefs.GetInt("Vidas") < 1)
         {
             PlayerPrefs.SetInt("Vidas", 0);
-            Application.LoadLevel("Mapa_Fases");
+            AutoFade.LoadLevel("Mapa_Fases", 0.25f, 0.3f, Color.black);
+   
         }
         
         PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") - 1);
@@ -374,22 +375,22 @@ public class GameplayScript : MonoBehaviour {
     {
         
         Time.timeScale = 1;
-      
-        Application.LoadLevel("Mapa_Fases");
+
+        AutoFade.LoadLevel("Mapa_Fases", 0.25f, 0.3f, Color.black);
     }
 
     public static void DoReplay()
     {
         Time.timeScale = 1;
-        Application.LoadLevel(Application.loadedLevel);
+        AutoFade.LoadLevel(Application.loadedLevelName, 0.25f, 0.3f, Color.black);
+     
         
     }
 
     public static void DoNextLevel()
     {
         Time.timeScale = 1;
-      
-        Application.LoadLevel("Mapa_Fases");
-  
+        AutoFade.LoadLevel("Mapa_Fases", 0.25f, 0.3f, Color.black);
+   
     }
 }
