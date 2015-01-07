@@ -18,7 +18,8 @@ public class TrilhoNovo : MonoBehaviour {
 
     void Awake()
     {
-
+        Debug.Log(pontos.Count.ToString());
+      
         #if UNITY_EDITOR
         if (!UnityEditor.EditorApplication.isPlaying)
         {
@@ -31,9 +32,10 @@ public class TrilhoNovo : MonoBehaviour {
         }
 #endif
     }
-
+    
     void Start()
     {
+      
    //     pontos = new List<GameObject>();
 
 
@@ -42,6 +44,14 @@ public class TrilhoNovo : MonoBehaviour {
         if (UnityEditor.EditorApplication.isPlaying)
         {
             Comeca();
+        }
+        else
+        {
+            if (pontos.Count < 2)
+            {
+                
+                Comeca2();
+            }
         }
 #else
         Comeca();
@@ -94,6 +104,7 @@ public class TrilhoNovo : MonoBehaviour {
 
     void Comeca2()
     {
+        Debug.Log("comeca2");
         Object p1 = Instantiate(Ponto, new Vector3(this.transform.position.x, this.transform.position.y, 3), Quaternion.identity);
         Object p2 = Instantiate(Ponto, new Vector3(this.transform.position.x + 0.6f, this.transform.position.y, 3), Quaternion.identity);
 
@@ -103,6 +114,7 @@ public class TrilhoNovo : MonoBehaviour {
 
     void Comeca()
     {
+        Debug.Log(pontos.Count.ToString());
         this.renderer.enabled = MostrarLinha;
         for (int i = 0; i < pontos.Count; i++)
         {
@@ -155,10 +167,11 @@ public class TrilhoNovo : MonoBehaviour {
         }
 
 #else
+          this.renderer.enabled = MostrarLinha;
      this.rigidbody2D.velocity = direcao * Velocidade * sentido * -1;
 #endif
-      
-}
+
+    }
 
 
     public void AddPonto()

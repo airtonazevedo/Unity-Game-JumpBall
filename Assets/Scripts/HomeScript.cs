@@ -65,7 +65,7 @@ public class HomeScript : MonoBehaviour {
 
     void comecar()
     {
-        AutoFade.LoadLevel("Mapa_Fases", 0.25f, 0.3f, Color.black);
+        AutoFade.LoadLevel("Mapa_Fases", 0.2f, 0.2f, Color.black);
    //     Application.LoadLevel("Mapa_Fases");
     }
 

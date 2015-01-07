@@ -382,8 +382,8 @@ public class GameplayScript : MonoBehaviour {
     public static void DoReplay()
     {
         Time.timeScale = 1;
-        AutoFade.LoadLevel(Application.loadedLevelName, 0.25f, 0.3f, Color.black);
-     
+        //AutoFade.LoadLevel(Application.loadedLevelName, 0.25f, 0.3f, Color.black);
+        Application.LoadLevel(Application.loadedLevelName);
         
     }
 

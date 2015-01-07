@@ -32,7 +32,7 @@ public class Colisao : MonoBehaviour {
         {
             foreach (var item in collision.contacts)
             {
-                if (item.normal.x == 0)
+                if (item.normal.x == 0 && item.normal.y > 0.5f)
                 {
 
                     transform.parent.SendMessage("PecasColisao");
@@ -46,39 +46,42 @@ public class Colisao : MonoBehaviour {
                 }
             }
         }
-
-        if (collision.collider.CompareTag("Pecacai"))
-        {
-            foreach (var item in collision.contacts)
+            if (collision.collider.CompareTag("Pecacai") )
             {
-                if (item.normal.x == 0)
+              
+                foreach (var item in collision.contacts)
                 {
-                    collision.gameObject.rigidbody2D.isKinematic = false;
-                    collision.gameObject.rigidbody2D.gravityScale = 1;
-                    collision.gameObject.collider2D.isTrigger = true;
-                    transform.parent.SendMessage("PecasColisao");
-                }
-                else
-                {
-                    if (item.normal.y > 0.7f)
-                    {
 
+                    if (item.normal.x == 0 && item.normal.y > 0.5f)
+                    {
                         collision.gameObject.rigidbody2D.isKinematic = false;
-                    collision.gameObject.rigidbody2D.gravityScale = 1;
-                    collision.gameObject.collider2D.isTrigger = true;
+                        collision.gameObject.rigidbody2D.gravityScale = 1;
+                        collision.gameObject.collider2D.isTrigger = true;
+                        
                         transform.parent.SendMessage("PecasColisao");
                     }
-                }
-            }
+                    else
+                    {
+                        if (item.normal.y > 0.7f)
+                        {
 
-        }
+                            collision.gameObject.rigidbody2D.isKinematic = false;
+                            collision.gameObject.rigidbody2D.gravityScale = 1;
+                            collision.gameObject.collider2D.isTrigger = true;
+                            transform.parent.SendMessage("PecasColisao");
+                        }
+                    }
+                }
+
+            }
+        
+
         if (collision.collider.CompareTag("Up"))
         {
             foreach (var item in collision.contacts)
             {
                 if (item.normal.x == 0)
                 {
-
                     transform.parent.SendMessage("UpColisao");
                 }
                 else
@@ -90,18 +93,49 @@ public class Colisao : MonoBehaviour {
                 }
             }
         }
+
+        if (collision.collider.CompareTag("Upcai"))
+        {
+
+            foreach (var item in collision.contacts)
+            {
+
+                if (item.normal.x == 0 && item.normal.y > 0.5f)
+                {
+                    collision.gameObject.rigidbody2D.isKinematic = false;
+                    collision.gameObject.rigidbody2D.gravityScale = 1;
+                    collision.gameObject.collider2D.isTrigger = true;
+
+                    transform.parent.SendMessage("UpColisao");
+                }
+                else
+                {
+                    if (item.normal.y > 0.7f)
+                    {
+
+                        collision.gameObject.rigidbody2D.isKinematic = false;
+                        collision.gameObject.rigidbody2D.gravityScale = 1;
+                        collision.gameObject.collider2D.isTrigger = true;
+                        transform.parent.SendMessage("UpColisao");
+                    }
+                }
+            }
+
+        }
+        
         
     }
 
     void OnTriggerEnter2D(Collider2D colisor) 
     {
+
         if (colisor.CompareTag("Finish"))
         {
               transform.parent.SendMessage("Reiniciar");
         }
         if (colisor.CompareTag("Sensor"))
         {
-            colisor.gameObject.rigidbody2D.isKinematic = false;
+              colisor.gameObject.rigidbody2D.isKinematic = false;
         }
         if (colisor.CompareTag("Agua"))
         {
