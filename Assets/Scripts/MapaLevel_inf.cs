@@ -14,6 +14,12 @@ public class MapaLevel_inf : MonoBehaviour {
     public GameObject Estrela3;
     public GameObject Confirmacao;
     public GameObject Confirmacao2;
+    public GameObject Confirmacao3;
+    public GameObject Numvidas;
+    public GameObject Numvidas2;
+
+
+
 
     private int SelectedLevelNumber;
 		  
@@ -153,6 +159,7 @@ public class MapaLevel_inf : MonoBehaviour {
                 if (hitCollider.name == "X1")
                 {
                     Confirmacao2.SetActive(false);
+                    Confirmacao3.SetActive(false);
           
                     Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
                     Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
@@ -166,12 +173,16 @@ public class MapaLevel_inf : MonoBehaviour {
                     Debug.Log("Video ganha vidas");
                     PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
                     Confirmacao2.SetActive(false);
+                    Confirmacao3.SetActive(false);
+          
                 }
                 if (hitCollider.name == "BotaoComprarVidas")
                 {
                     Debug.Log("Comprar vidas");
                     PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 100);
                     Confirmacao2.SetActive(false);
+                    Confirmacao3.SetActive(false);
+          
                     
                 }
 
@@ -182,7 +193,10 @@ public class MapaLevel_inf : MonoBehaviour {
 
     void Vidas()
     {
-        Confirmacao2.SetActive(true);
+
+        Numvidas.GetComponent<TextMesh>().text = PlayerPrefs.GetInt("Vidas").ToString();
+        Numvidas2.GetComponent<TextMesh>().text = "Você tem " + PlayerPrefs.GetInt("Vidas").ToString() + " vidas";
+        Confirmacao3.SetActive(true);
     }
 
    
