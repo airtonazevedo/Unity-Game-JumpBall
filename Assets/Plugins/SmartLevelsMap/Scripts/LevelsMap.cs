@@ -161,6 +161,11 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
             return _instance.IsClickEnabled;
         }
 
+		public static void ChangeIsClickEnabled(bool active)
+		{
+			 _instance.IsClickEnabled = active;
+		}
+
         public static bool GetIsConfirmationEnabled()
         {
             return _instance.IsConfirmationEnabled;

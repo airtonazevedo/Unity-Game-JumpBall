@@ -29,6 +29,8 @@ public class MapaLevel_inf : MonoBehaviour {
         if (PlayerPrefs.GetInt("Vidas") < 1)
         {
             PlayerPrefs.SetInt("Vidas", 0);
+			
+			//LevelsMap.ChangeIsClickEnabled(false);
             Confirmacao2.SetActive(true);
         }
 
@@ -86,7 +88,7 @@ public class MapaLevel_inf : MonoBehaviour {
 
 		if (LevelsMap.GetIsConfirmationEnabled() && !LevelsMap.IsLevelLocked(e.Number) && PlayerPrefs.GetInt("Vidas") > 0)
         {
-		
+			LevelsMap.ChangeIsClickEnabled(false);
             Confirmacao.SetActive(true);
 			SelectedLevelNumber = e.Number;
 		    Fase.GetComponent<TextMesh>().text = "Fase " + SelectedLevelNumber.ToString();
@@ -128,6 +130,8 @@ public class MapaLevel_inf : MonoBehaviour {
 		}
         else if (PlayerPrefs.GetInt("Vidas") == 0)
         {
+			
+			LevelsMap.ChangeIsClickEnabled(false);
             Confirmacao2.SetActive(true);
         }
 	}
@@ -152,12 +156,15 @@ public class MapaLevel_inf : MonoBehaviour {
                     Estrela1.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
                 Estrela2.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
                 Estrela3.GetComponent<SpriteRenderer>().sprite = Resources.Load("EstrelaM", typeof(Sprite)) as Sprite;
-
+					
+					LevelsMap.ChangeIsClickEnabled(true);
                 Confirmacao.SetActive(false);
                    LevelsMap.GoToLevel(SelectedLevelNumber);
                  }
                 if (hitCollider.name == "X1")
                 {
+					
+					LevelsMap.ChangeIsClickEnabled(true);
                     Confirmacao2.SetActive(false);
                     Confirmacao3.SetActive(false);
           
@@ -169,7 +176,8 @@ public class MapaLevel_inf : MonoBehaviour {
                 }
                 if (hitCollider.name == "BotaoVidasGratis")
                 {
-
+					
+					LevelsMap.ChangeIsClickEnabled(true);
                     Debug.Log("Video ganha vidas");
                     PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
                     Confirmacao2.SetActive(false);
@@ -178,6 +186,8 @@ public class MapaLevel_inf : MonoBehaviour {
                 }
                 if (hitCollider.name == "BotaoComprarVidas")
                 {
+					
+					LevelsMap.ChangeIsClickEnabled(true);
                     Debug.Log("Comprar vidas");
                     PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 100);
                     Confirmacao2.SetActive(false);
@@ -193,7 +203,8 @@ public class MapaLevel_inf : MonoBehaviour {
 
     void Vidas()
     {
-
+		
+		LevelsMap.ChangeIsClickEnabled(false);
         Numvidas.GetComponent<TextMesh>().text = PlayerPrefs.GetInt("Vidas").ToString();
         Numvidas2.GetComponent<TextMesh>().text = "Você tem " + PlayerPrefs.GetInt("Vidas").ToString() + " vidas";
         Confirmacao3.SetActive(true);

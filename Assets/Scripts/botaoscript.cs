@@ -19,6 +19,7 @@ public class botaoscript : MonoBehaviour {
         // verifica com quem está tendo colisão
         if (collision.collider.CompareTag("Bola"))
         {
+			collision.gameObject.rigidbody2D.velocity = Vector2.up * 4.5f;
             Sprite tex = Resources.Load("BotaoAmareloF", typeof(Sprite)) as Sprite;
 
             

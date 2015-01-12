@@ -63,7 +63,7 @@ public class GameplayScript : MonoBehaviour {
         Time.timeScale = 1;
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
         Bola.GetComponent<SpriteRenderer>().sprite = tex;
-        tex = Resources.Load("Fundo" +  UnityEngine.Random.Range(1, 9).ToString(), typeof(Sprite)) as Sprite;
+        tex = Resources.Load("Fundo" +  UnityEngine.Random.Range(1, 5).ToString(), typeof(Sprite)) as Sprite;
         Fundao.GetComponent<SpriteRenderer>().sprite = tex;
 
         _pos = Vector3.zero;
