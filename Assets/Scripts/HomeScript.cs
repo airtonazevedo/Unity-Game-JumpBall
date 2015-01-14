@@ -30,6 +30,10 @@ public class HomeScript : MonoBehaviour {
         {
             PlayerPrefs.SetInt("Vidas", 100);
         }
+        #if (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
+
+        UnityEngine.Advertisements.Advertisement.Initialize("18062");
+        #endif
     }
 	
 	// Update is called once per frame

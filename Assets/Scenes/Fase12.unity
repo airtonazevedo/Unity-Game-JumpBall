@@ -621,7 +621,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 356976266}
   m_GameObject: {fileID: 253533393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d544905c04a177a458f8003771f90f9a, type: 3}
   m_Name: 
@@ -1650,7 +1650,7 @@ Transform:
   m_Children:
   - {fileID: 253533394}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &603640690
 Prefab:
   m_ObjectHideFlags: 0
@@ -1877,7 +1877,7 @@ Transform:
   - {fileID: 534335317}
   - {fileID: 1781001589}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
 --- !u!114 &751382032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3204,7 +3204,7 @@ Transform:
   m_LocalScale: {x: 3.6206212, y: 724.124573, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &819291966
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,7 +3679,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!1001 &1233412716
 Prefab:
   m_ObjectHideFlags: 0
@@ -4490,7 +4490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1623999716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4966,7 +4966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7e3e0fbb5f3bf1459378310d53f5753, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d7e3e0fbb5f3bf1459378310d53f5753, type: 2}
       propertyPath: pontos.Array.data[0]
@@ -5055,7 +5055,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1902077451}
   m_GameObject: {fileID: 1752076169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d544905c04a177a458f8003771f90f9a, type: 3}
   m_Name: 

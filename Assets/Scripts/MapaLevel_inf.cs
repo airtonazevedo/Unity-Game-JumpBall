@@ -179,9 +179,23 @@ public class MapaLevel_inf : MonoBehaviour {
 					
 					LevelsMap.ChangeIsClickEnabled(true);
                     Debug.Log("Video ganha vidas");
-                    PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
+                   // PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
                     Confirmacao2.SetActive(false);
                     Confirmacao3.SetActive(false);
+                    
+        #if (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
+                    if (UnityEngine.Advertisements.Advertisement.isReady())
+                    {
+                        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
+                        Debug.Log("show!");
+                        UnityEngine.Advertisements.Advertisement.Show();
+                    }
+                    else
+                    {
+                        Debug.Log("nao!");
+                    }
+        #endif
+
           
                 }
                 if (hitCollider.name == "BotaoComprarVidas")

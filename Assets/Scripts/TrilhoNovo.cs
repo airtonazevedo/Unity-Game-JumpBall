@@ -236,7 +236,6 @@ public class TrilhoNovo : MonoBehaviour {
 			direcao.Normalize();
 
 		}
-
 	}
 
     public void AddPonto()
