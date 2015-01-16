@@ -329,50 +329,6 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -5.88779545
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.9927299
-      objectReference: {fileID: 0}
-    - target: {fileID: 400018, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -7.50000048
-      objectReference: {fileID: 0}
-    - target: {fileID: 400018, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5.70000029
-      objectReference: {fileID: 0}
-    - target: {fileID: 400014, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 400022, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5.70000029
-      objectReference: {fileID: 0}
-    - target: {fileID: 400022, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.80000007
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.80000007
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.30000019
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: proximafase
-      value: Fase8
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
       propertyPath: m_RootOrder
       value: 9
@@ -4126,7 +4082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tempo: {fileID: 660684438}
-  proximafase: Fase8
+  proximafase: 1
   Bonus: []
   Fundao: {fileID: 1650418935}
 --- !u!4 &2114349475

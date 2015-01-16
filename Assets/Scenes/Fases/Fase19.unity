@@ -3829,7 +3829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tempo: {fileID: 507305986}
-  proximafase: Fase
+  proximafase: 1
   Bonus: []
   Fundao: {fileID: 1009440490}
 --- !u!1 &1412340059
@@ -4406,7 +4406,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1154152824}
   m_GameObject: {fileID: 1655206313}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: eb96dd82b75388d45bde8da9f2ccdf19, type: 2}
   m_IsTrigger: 0
   m_Radius: .5
   m_Center: {x: 0, y: 0}

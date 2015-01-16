@@ -2054,7 +2054,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1028733781}
   m_GameObject: {fileID: 980212251}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: eb96dd82b75388d45bde8da9f2ccdf19, type: 2}
   m_IsTrigger: 0
   m_Radius: .5
   m_Center: {x: 0, y: 0}
@@ -2167,7 +2167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tempo: {fileID: 1958064861}
-  proximafase: Fase17
+  proximafase: 1
   Bonus: []
   Fundao: {fileID: 116146962}
 --- !u!1001 &1028733781
@@ -4547,10 +4547,6 @@ Prefab:
     - target: {fileID: 400004, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
       propertyPath: m_RootOrder
       value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
-      propertyPath: proximafase
-      value: Fase17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}

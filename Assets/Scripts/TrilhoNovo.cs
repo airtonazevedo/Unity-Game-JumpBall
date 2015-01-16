@@ -118,7 +118,7 @@ public class TrilhoNovo : MonoBehaviour {
     void Comeca()
     {
 				k = 0;
-				Debug.Log (pontos.Count.ToString ());
+
 				this.renderer.enabled = MostrarLinha;
 				for (int i = 0; i < pontos.Count; i++) {
 						this.GetComponent<LineRenderer> ().SetPosition (i, pontos [i].transform.position);

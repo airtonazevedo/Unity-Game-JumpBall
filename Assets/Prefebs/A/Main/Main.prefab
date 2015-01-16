@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tempo: {fileID: 13200000}
-  proximafase: Fase
+  proximafase: 1
   Bonus: []
   Fundao: {fileID: 100024}
 --- !u!114 &11400008

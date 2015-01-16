@@ -38,6 +38,8 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 
         [XmlArray("Fases"), XmlArrayItem("Fases")]
         public static List<FaseClass> fases = new List<FaseClass>();
+       
+       
 
         public static void Save()
         {
@@ -49,6 +51,7 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 
         public static void Load()
         {
+            Fases x = new Fases();
             if (File.Exists(Application.persistentDataPath + "/savedGames.xml"))
             {
 
@@ -82,10 +85,10 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
                 fases.Clear();
             }
            
-            for (int i = 1; i < 20; i++)
+            for (int i = 1; i < Fases.vetordefases.Count; i++)
             {
 
-                fases.Add(new FaseClass("Fase" + i.ToString(), 10, true, true, true, true));
+                fases.Add(new FaseClass(Fases.vetordefases[i - 1].ToString(), "Fase" + i.ToString(), 10, true, true, true, true));
 
             }
             Save();
@@ -93,18 +96,13 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 
 		public static void Iniciar()
 		{
-			fases.Add (new FaseClass ("Fase1", -1, false, false, false, true));
 
-			for (int i = 2; i<20; i++) {
-                if (i < 11)
-                {
-                    fases.Add(new FaseClass("Fase" + i.ToString(), -1, false, false, false, false));
-                }
-                else 
-                {
-                    fases.Add(new FaseClass("Fase" + i.ToString(), -1, false, false, false, false));
-                
-                }
+			fases.Add (new FaseClass (Fases.vetordefases[0].ToString(),"Fase1", -1, false, false, false, true));
+
+			for (int i = 2; i<Fases.vetordefases.Count+1; i++) {
+                fases.Add(new FaseClass(Fases.vetordefases[i-1].ToString(),"Fase" + i.ToString(), -1, false, false, false, false));
+        
+               
 			}
             
           	Save();
@@ -129,6 +127,9 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
 
     public class FaseClass
     {
+
+        [XmlAttribute("nome")]
+        public string nome;
         [XmlAttribute("fase")]
         public string fase;
         [XmlAttribute("tempo")]
@@ -147,8 +148,9 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
         }
 
 
-        public FaseClass(string fase, float tempo, bool estrela1, bool estrela2, bool estrela3, bool aberta)
+        public FaseClass(string nome, string fase, float tempo, bool estrela1, bool estrela2, bool estrela3, bool aberta)
         {
+            this.nome = nome;
             this.fase = fase;
             this.tempo = tempo;
             this.estrela1 = estrela1;
@@ -161,7 +163,9 @@ namespace Assets.Plugins.SmartLevelsMap.Scripts
         {
             string str = "";
 
-            str += "fase = " + fase;
+            str += "nome = " + nome;
+            
+            str += "  fase = " + fase;
             str += "  tempo = " + tempo;
             str += "  estrela1 = " + estrela1;
             str += "  estrela2 = " + estrela2;

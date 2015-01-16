@@ -467,7 +467,7 @@ Transform:
   - {fileID: 26796650}
   - {fileID: 2068071186}
   m_Father: {fileID: 1253279453}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!61 &82543852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: Number
@@ -611,7 +611,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 0e13ed075c3a49f4bb1a9a49dbe44145,
+      objectReference: {fileID: 102900000, guid: 49275ecd60b4be642ac14984879240c4,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 1769117522}
   PathPivot: {fileID: 558239527}
-  LevelScene: {fileID: 102900000, guid: 66dee823676fb0d4ab2185cad4c3504b, type: 3}
+  LevelScene: {fileID: 102900000, guid: 827e71b3bf65cae42880cda3b190eda2, type: 3}
   SceneName: Fase9
   StarsCount: 0
   StarsHoster: {fileID: 1948627407}
@@ -1525,7 +1525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: Number
@@ -2337,7 +2337,7 @@ Transform:
   - {fileID: 1973729596}
   - {fileID: 1894917772}
   m_Father: {fileID: 1253279453}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!61 &288345119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2368,7 +2368,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 1973729596}
   PathPivot: {fileID: 1605065283}
-  LevelScene: {fileID: 102900000, guid: b3122869cfe87cd4b8fc65358db1d14b, type: 3}
+  LevelScene: {fileID: 102900000, guid: 190149518a3fecf4e866f61356a25587, type: 3}
   SceneName: Fase3
   StarsCount: 0
   StarsHoster: {fileID: 1229186709}
@@ -2910,7 +2910,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: Number
@@ -2943,7 +2943,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: b3122869cfe87cd4b8fc65358db1d14b,
+      objectReference: {fileID: 102900000, guid: 190149518a3fecf4e866f61356a25587,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -3131,7 +3131,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 41dfba7c88d82574caf946cc194ac0e9,
+      objectReference: {fileID: 102900000, guid: 8a26175d5cc38b54fa65840a94af7ec4,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -3650,7 +3650,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 2005199576}
   PathPivot: {fileID: 1607923756}
-  LevelScene: {fileID: 102900000, guid: c04c012ad8dcd4b418117d3a70dad279, type: 3}
+  LevelScene: {fileID: 102900000, guid: 5bbd97ee5259c7c4089a2cff6527a1e4, type: 3}
   SceneName: Fase13
   StarsCount: 0
   StarsHoster: {fileID: 469388279}
@@ -5425,7 +5425,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: c04c012ad8dcd4b418117d3a70dad279,
+      objectReference: {fileID: 102900000, guid: 5bbd97ee5259c7c4089a2cff6527a1e4,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -5903,7 +5903,7 @@ Transform:
   - {fileID: 551568434}
   - {fileID: 448772553}
   m_Father: {fileID: 1253279453}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!61 &785699637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5934,7 +5934,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 551568434}
   PathPivot: {fileID: 1290038439}
-  LevelScene: {fileID: 102900000, guid: 8a26175d5cc38b54fa65840a94af7ec4, type: 3}
+  LevelScene: {fileID: 102900000, guid: f5de2dc161e603c4c9b5daba3871e551, type: 3}
   SceneName: Fase5
   StarsCount: 0
   StarsHoster: {fileID: 711558513}
@@ -6742,7 +6742,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 66dee823676fb0d4ab2185cad4c3504b,
+      objectReference: {fileID: 102900000, guid: 827e71b3bf65cae42880cda3b190eda2,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -7402,7 +7402,7 @@ Transform:
   - {fileID: 1380145718}
   - {fileID: 1664386265}
   m_Father: {fileID: 1253279453}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!61 &981181087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8264,7 +8264,7 @@ Transform:
   - {fileID: 266069213}
   - {fileID: 489991198}
   m_Father: {fileID: 1253279453}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!61 &1151722447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8295,7 +8295,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 266069213}
   PathPivot: {fileID: 937335088}
-  LevelScene: {fileID: 102900000, guid: 190149518a3fecf4e866f61356a25587, type: 3}
+  LevelScene: {fileID: 102900000, guid: b3122869cfe87cd4b8fc65358db1d14b, type: 3}
   SceneName: Fase4
   StarsCount: 0
   StarsHoster: {fileID: 1285715175}
@@ -9271,12 +9271,12 @@ Transform:
   m_LocalPosition: {x: .145719111, y: -.521004021, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1739927534}
   - {fileID: 82543851}
   - {fileID: 981181086}
   - {fileID: 288345118}
   - {fileID: 1151722446}
   - {fileID: 785699636}
+  - {fileID: 1739927534}
   - {fileID: 1633463715}
   - {fileID: 1489327960}
   - {fileID: 139290001}
@@ -9602,7 +9602,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 49275ecd60b4be642ac14984879240c4,
+      objectReference: {fileID: 102900000, guid: 66dee823676fb0d4ab2185cad4c3504b,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -9887,7 +9887,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 827e71b3bf65cae42880cda3b190eda2,
+      objectReference: {fileID: 102900000, guid: e16cc75cbcaabc74abea021d330ffd58,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -10130,7 +10130,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 8a26175d5cc38b54fa65840a94af7ec4,
+      objectReference: {fileID: 102900000, guid: f5de2dc161e603c4c9b5daba3871e551,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -10146,7 +10146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
@@ -10380,7 +10380,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 5bbd97ee5259c7c4089a2cff6527a1e4,
+      objectReference: {fileID: 102900000, guid: 0ea974cb2ef06cf45b786aed27a33bcf,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -10612,7 +10612,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 1356843737}
   PathPivot: {fileID: 1986712012}
-  LevelScene: {fileID: 102900000, guid: e16cc75cbcaabc74abea021d330ffd58, type: 3}
+  LevelScene: {fileID: 102900000, guid: 41dfba7c88d82574caf946cc194ac0e9, type: 3}
   SceneName: Fase18
   StarsCount: 0
   StarsHoster: {fileID: 972579104}
@@ -10717,7 +10717,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: e16cc75cbcaabc74abea021d330ffd58,
+      objectReference: {fileID: 102900000, guid: 41dfba7c88d82574caf946cc194ac0e9,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -11042,7 +11042,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 9440687}
   PathPivot: {fileID: 939186332}
-  LevelScene: {fileID: 102900000, guid: 41dfba7c88d82574caf946cc194ac0e9, type: 3}
+  LevelScene: {fileID: 102900000, guid: 8a26175d5cc38b54fa65840a94af7ec4, type: 3}
   SceneName: Fase15
   StarsCount: 0
   StarsHoster: {fileID: 1809075622}
@@ -11262,7 +11262,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: f5de2dc161e603c4c9b5daba3871e551,
+      objectReference: {fileID: 102900000, guid: c04c012ad8dcd4b418117d3a70dad279,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -11430,7 +11430,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 47232661}
   PathPivot: {fileID: 1102809844}
-  LevelScene: {fileID: 102900000, guid: 0ea974cb2ef06cf45b786aed27a33bcf, type: 3}
+  LevelScene: {fileID: 102900000, guid: 0e13ed075c3a49f4bb1a9a49dbe44145, type: 3}
   SceneName: Fase8
   StarsCount: 0
   StarsHoster: {fileID: 1587559512}
@@ -12104,7 +12104,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 545987032}
   PathPivot: {fileID: 491242093}
-  LevelScene: {fileID: 102900000, guid: 5bbd97ee5259c7c4089a2cff6527a1e4, type: 3}
+  LevelScene: {fileID: 102900000, guid: 0ea974cb2ef06cf45b786aed27a33bcf, type: 3}
   SceneName: Fase17
   StarsCount: 0
   StarsHoster: {fileID: 131207363}
@@ -12232,7 +12232,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 1435032431}
   PathPivot: {fileID: 1318138588}
-  LevelScene: {fileID: 102900000, guid: 49275ecd60b4be642ac14984879240c4, type: 3}
+  LevelScene: {fileID: 102900000, guid: 66dee823676fb0d4ab2185cad4c3504b, type: 3}
   SceneName: Fase16
   StarsCount: 0
   StarsHoster: {fileID: 1198069058}
@@ -12792,7 +12792,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 1596805990}
   PathPivot: {fileID: 1384271821}
-  LevelScene: {fileID: 102900000, guid: f5de2dc161e603c4c9b5daba3871e551, type: 3}
+  LevelScene: {fileID: 102900000, guid: c04c012ad8dcd4b418117d3a70dad279, type: 3}
   SceneName: Fase7
   StarsCount: 0
   StarsHoster: {fileID: 1728155187}
@@ -13549,7 +13549,7 @@ Transform:
   - {fileID: 1065846374}
   - {fileID: 431588311}
   m_Father: {fileID: 1253279453}
-  m_RootOrder: 0
+  m_RootOrder: 5
 --- !u!61 &1739927535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13580,7 +13580,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 1065846374}
   PathPivot: {fileID: 1244793600}
-  LevelScene: {fileID: 102900000, guid: 0e13ed075c3a49f4bb1a9a49dbe44145, type: 3}
+  LevelScene: {fileID: 102900000, guid: 49275ecd60b4be642ac14984879240c4, type: 3}
   SceneName: Fase6
   StarsCount: 0
   StarsHoster: {fileID: 2067116450}
@@ -13754,7 +13754,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: Number
@@ -14956,7 +14956,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: Number
@@ -14985,7 +14985,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 190149518a3fecf4e866f61356a25587,
+      objectReference: {fileID: 102900000, guid: b3122869cfe87cd4b8fc65358db1d14b,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -15829,7 +15829,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: LevelScene
       value: 
-      objectReference: {fileID: 102900000, guid: 0ea974cb2ef06cf45b786aed27a33bcf,
+      objectReference: {fileID: 102900000, guid: 0e13ed075c3a49f4bb1a9a49dbe44145,
         type: 3}
     - target: {fileID: 11400000, guid: 105903d664c39294e926aed54de8b6c8, type: 2}
       propertyPath: SceneName
@@ -15915,7 +15915,7 @@ MonoBehaviour:
   IsLocked: 0
   Lock: {fileID: 1741369450}
   PathPivot: {fileID: 1639137026}
-  LevelScene: {fileID: 102900000, guid: 827e71b3bf65cae42880cda3b190eda2, type: 3}
+  LevelScene: {fileID: 102900000, guid: e16cc75cbcaabc74abea021d330ffd58, type: 3}
   SceneName: Fase14
   StarsCount: 0
   StarsHoster: {fileID: 368494047}

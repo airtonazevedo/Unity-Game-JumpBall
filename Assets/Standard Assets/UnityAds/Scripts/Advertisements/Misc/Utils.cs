@@ -41,7 +41,7 @@ namespace UnityEngine.Advertisements {
 
     private static void Log(DebugLevel debugLevel, string message) {
       if((Advertisement.debugLevel & debugLevel) != DebugLevel.NONE) {
-        Debug.Log(message);
+       // Debug.Log(message);
       }
     }
 

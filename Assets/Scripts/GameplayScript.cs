@@ -9,7 +9,7 @@ public class GameplayScript : MonoBehaviour {
     private GameObject Estrelaa;
     private GameObject Estrelab;
     private GameObject Estrelac;
-    public string proximafase = "Fase";
+    public bool proximafase = true;
     public string[] Bonus;
  
     public GameObject Fundao;
@@ -252,11 +252,26 @@ public class GameplayScript : MonoBehaviour {
     {
         if (_segurabotaod)
         {
-            Bola.transform.Translate(Bola.transform.right * Time.deltaTime * _velocidade);
+            
+            Bola.transform.rigidbody2D.angularVelocity = -300;
+            Bola.transform.rigidbody2D.velocity = Vector2.right*_velocidade + Bola.transform.rigidbody2D.velocity.y*Vector2.up;
+            
+            //Bola.transform.Translate(Bola.transform.right * Time.deltaTime * _velocidade);
         }
-        if (_segurabotaol)
+        else if (_segurabotaol)
         {
-            Bola.transform.Translate(Bola.transform.right * Time.deltaTime * _velocidade * (-1));
+
+            Bola.transform.rigidbody2D.angularVelocity = 300;
+            Bola.transform.rigidbody2D.velocity = Vector2.right * _velocidade*(-1) + Bola.transform.rigidbody2D.velocity.y * Vector2.up;
+          
+            // Bola.transform.Translate(Bola.transform.right * Time.deltaTime * _velocidade * (-1));
+        }
+        else
+        {
+            Bola.transform.rigidbody2D.angularVelocity = 0;
+          
+            Bola.transform.rigidbody2D.velocity = Bola.transform.rigidbody2D.velocity.y * Vector2.up;
+          
         }
     }
 	// Update is called once per frame
@@ -281,6 +296,7 @@ public class GameplayScript : MonoBehaviour {
 
     void PecasColisao()
     {
+//        Debug.Log(Bola.transform.position.x.ToString());
         Bola.rigidbody2D.velocity = Vector2.up * 4.5f;
     }
     void UpColisao()
@@ -309,7 +325,7 @@ public class GameplayScript : MonoBehaviour {
              int nestrelas = 0;
              _validatempo = false;
 
-             FaseClass _fase = new FaseClass(Application.loadedLevelName, temp, estrelas[0], estrelas[1], estrelas[2], true);
+             FaseClass _fase = new FaseClass(Application.loadedLevelName,"Fase", temp, estrelas[0], estrelas[1], estrelas[2], true);
             
              Debug.Log(_fase.ToString());
              if (estrelas[0]) { nestrelas++; }
@@ -317,37 +333,34 @@ public class GameplayScript : MonoBehaviour {
              if (estrelas[2]) { nestrelas++; }
              ResultManager.Instance.ShowResultBox(true, nestrelas, new CallbackFunction[] { DoChooseLevels, DoReplay, DoNextLevel });
 
-             try
-             {
-                 foreach (var item in Banco.fases)
+          //   try
+          //   {
+                 for (int i = 0; i<Banco.fases.Count; i++)
                  {
 
-                     if (item.fase == _fase.fase)
+                     if (Banco.fases[i].nome == _fase.nome)
                      {
-                         item.estrela1 = _fase.estrela1;
-                         item.estrela2 = _fase.estrela2;
-                         item.estrela3 = _fase.estrela3;
-                         if (item.tempo > _fase.tempo || item.tempo < 0)
+                         Banco.fases[i].estrela1 = _fase.estrela1;
+                         Banco.fases[i].estrela2 = _fase.estrela2;
+                         Banco.fases[i].estrela3 = _fase.estrela3;
+                         if (Banco.fases[i].tempo > _fase.tempo || Banco.fases[i].tempo < 0)
                          {
-                             item.tempo = _fase.tempo;
+                             Banco.fases[i].tempo = _fase.tempo;
                          }
-                        
+
+                         if (proximafase)
+                         {
+
+                             Banco.fases[i + 1 + Bonus.Length].aberta = true;
+                         }
                          
                      }
-
-                   if (item.fase == proximafase && !_vence2)
-					{
-
-						item.aberta = true;
-
-
-					}
                    else if (Bonus.Length > 0) 
-                   { 
-                      if (item.fase == Bonus[0] && _vence2)
+                   {
+                      if (_vence2)
                       {
                           Debug.Log("nao fora");
-                        item.aberta = true;
+                          Banco.fases[i+1].aberta = true;
                   
                       }
                  }
@@ -356,8 +369,8 @@ public class GameplayScript : MonoBehaviour {
                  }
                   Banco.Save();
            
-             }
-             catch { Debug.Log("errão"); }
+         //    }
+         //    catch { Debug.Log("errão"); }
 
          }
          else
