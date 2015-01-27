@@ -348,22 +348,23 @@ public class GameplayScript : MonoBehaviour {
                              Banco.fases[i].tempo = _fase.tempo;
                          }
 
-                         if (proximafase)
+                         if (proximafase && !_vence2)
                          {
 
                              Banco.fases[i + 1 + Bonus.Length].aberta = true;
                          }
+                         if (Bonus.Length > 0)
+                         {
+                             if (_vence2)
+                             {
+                                 Debug.Log("nao fora");
+                                 Banco.fases[i + 1].aberta = true;
+
+                             }
+                         }
                          
                      }
-                   else if (Bonus.Length > 0) 
-                   {
-                      if (_vence2)
-                      {
-                          Debug.Log("nao fora");
-                          Banco.fases[i+1].aberta = true;
                   
-                      }
-                 }
 
 					
                  }

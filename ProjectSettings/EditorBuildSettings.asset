@@ -53,3 +53,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Fases/Fase13.unity
   - enabled: 1
     path: Assets/Scenes/Fases/Fase14.unity
+  - enabled: 1
+    path: Assets/Scenes/Fases/Fase20.unity
+  - enabled: 1
+    path: Assets/Scenes/Fases/Fase21.unity
+  - enabled: 1
+    path: Assets/Scenes/Fases/Fase22.unity
+  - enabled: 1
+    path: Assets/Scenes/Fases/Fase23.unity
+  - enabled: 1
+    path: Assets/Scenes/Fases/Fase24.unity

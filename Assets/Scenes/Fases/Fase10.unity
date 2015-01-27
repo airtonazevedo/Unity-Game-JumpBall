@@ -3568,7 +3568,7 @@ MonoBehaviour:
   Tempo: {fileID: 685141252}
   proximafase: 1
   Bonus:
-  - s
+  - Fase11
   Fundao: {fileID: 630277607}
 --- !u!1001 &561751353
 Prefab:
@@ -4961,7 +4961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}
       propertyPath: Bonus.Array.data[0]
-      value: s
+      value: Fase11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 146b4f4e7d4c31442b0da02fc58b7290, type: 2}

@@ -28,6 +28,10 @@ public class Fases{
         vetordefases.Add("Fase19");
         vetordefases.Add("Fase20");
         vetordefases.Add("Fase21");
+        vetordefases.Add("Fase22");
+        vetordefases.Add("Fase23");
+        vetordefases.Add("Fase24");
+        vetordefases.Add("Fase25");
     }
 	
 }
