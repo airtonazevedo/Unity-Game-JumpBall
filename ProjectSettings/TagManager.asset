@@ -20,6 +20,9 @@ TagManager:
   - "Fuma\xE7a"
   - Sensor
   - Upcai
+  - BotaoVerde
+  - BotaoVermelho
+  - BotaoAzul
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

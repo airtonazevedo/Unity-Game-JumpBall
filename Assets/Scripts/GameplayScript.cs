@@ -171,7 +171,7 @@ public class GameplayScript : MonoBehaviour {
 
     void Reiniciar()
     {
-        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") - 4);
+     //   PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") - 1);
         Bola.renderer.enabled = false;
         Bola.collider2D.isTrigger = true;
         Time.timeScale = 0;
@@ -186,8 +186,9 @@ public class GameplayScript : MonoBehaviour {
         Bola.collider2D.isTrigger = true;
         //Time.timeScale = 0;
         _vence = true;
-        
-        
+
+        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 1);
+
         //Application.LoadLevel(2);
     }
 
