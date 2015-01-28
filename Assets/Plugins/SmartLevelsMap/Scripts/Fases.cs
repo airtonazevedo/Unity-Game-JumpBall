@@ -31,7 +31,8 @@ public class Fases{
         vetordefases.Add("Fase22");
         vetordefases.Add("Fase23");
         vetordefases.Add("Fase24");
-        vetordefases.Add("Fase25");
+        vetordefases.Add("UltimaFase");
+		vetordefases.Add("Fase26");
     }
 	
 }
