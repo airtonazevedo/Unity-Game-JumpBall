@@ -204,8 +204,8 @@ public class GameplayScript : MonoBehaviour {
     {
         if (Input.GetMouseButton(0))
         {
-            _pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (_pos.x < 0)
+            _pos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            if (_pos.x < 0.5f)
             {
                 _segurabotaol = true;
                 _segurabotaod = false;
