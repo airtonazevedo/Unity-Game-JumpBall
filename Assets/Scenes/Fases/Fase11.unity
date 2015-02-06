@@ -642,11 +642,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 567297926}
   - {fileID: 1304289768}
+  - {fileID: 567297926}
   - {fileID: 961907956}
-  - {fileID: 1957166110}
   - {fileID: 2012605487}
+  - {fileID: 1957166110}
   m_Father: {fileID: 0}
   m_RootOrder: 7
 --- !u!114 &207903929
@@ -1845,7 +1845,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 207903928}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!212 &567297927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4627,7 +4627,7 @@ Transform:
   m_LocalScale: {x: 3.6206212, y: 724.124573, z: 1}
   m_Children: []
   m_Father: {fileID: 207903928}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!61 &1304289769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6467,7 +6467,7 @@ Transform:
   m_LocalScale: {x: 5.82995129, y: 3.02212214, z: 1.5818603}
   m_Children: []
   m_Father: {fileID: 207903928}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &1957166111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6561,7 +6561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 207903928}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!132 &2012605488
 GUIText:
   m_ObjectHideFlags: 0

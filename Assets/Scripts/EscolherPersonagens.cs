@@ -15,10 +15,6 @@ public class EscolherPersonagens : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Sprite spt = Resources.Load("Imagem", typeof(Sprite)) as Sprite;
-        
-
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.LoadLevel(0);
@@ -27,7 +23,6 @@ public class EscolherPersonagens : MonoBehaviour {
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
 
         Personagem.sprite = tex;
-        Personagem.transform.Rotate(0, 0, -100 * Time.deltaTime);
 
     }
 

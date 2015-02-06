@@ -12,7 +12,7 @@ public class Personagens : MonoBehaviour {
     public float w1;
     void OnGUI()
     {
-        string[] nome = new string[15];
+        string[] nome = new string[18];
         float h, w, x, y;
 
         h = Screen.height * h1;
@@ -21,15 +21,15 @@ public class Personagens : MonoBehaviour {
       
         y = Screen.height / 2 - w / 2 + y1 * Screen.height;
 
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 18; i++)
         {
             nome[i] = "B" + (i+1).ToString();
            // Debug.Log(nome[i]);
         }
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {
-            x = (Screen.width / 6 * (i+1)) - w/2;
+            x = (Screen.width / 7 * (i+1)) - w/2;
 
             if (GUI.Button(new Rect(x, y, w, h), btnTexture[i])) { 
               //  transform.parent.SendMessage(nome[i]);
@@ -37,11 +37,11 @@ public class Personagens : MonoBehaviour {
         }
 
         }
-        y = Screen.height / 2 - w / 2 + (y1+0.15f) * Screen.height;
+        y = Screen.height / 2 - w / 2 + (y1+0.175f) * Screen.height;
 
-        for (int i = 5; i < 10; i++)
+        for (int i = 6; i < 12; i++)
         {
-            x = (Screen.width / 6 * (i + 1 -5)) - w / 2;
+            x = (Screen.width / 7 * (i + 1 -6)) - w / 2;
 
             if (GUI.Button(new Rect(x, y, w, h), btnTexture[i])){
               //  transform.parent.SendMessage(nome[i]);
@@ -51,11 +51,11 @@ public class Personagens : MonoBehaviour {
         }
 
 
-        y = Screen.height / 2 - w / 2 + (y1 + 0.30f) *Screen.height;
+        y = Screen.height / 2 - w / 2 + (y1 + 0.35f) *Screen.height;
 
-        for (int i = 10; i < 15; i++)
+        for (int i = 12; i < 18; i++)
         {
-            x = (Screen.width / 6 * (i + 1 - 10)) - w / 2;
+            x = (Screen.width / 7 * (i + 1 - 12)) - w / 2;
 
             if (GUI.Button(new Rect(x, y, w, h), btnTexture[i])) { 
                 //transform.parent.SendMessage(nome[i]);

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 
 public class Rodar : MonoBehaviour {
@@ -8,5 +8,6 @@ public class Rodar : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         this.transform.Rotate(0,0,velocidade);
+        Debug.Log("asd");
 	}
 }

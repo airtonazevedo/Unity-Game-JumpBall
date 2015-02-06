@@ -17,15 +17,35 @@ public class MapaLevel_inf : MonoBehaviour {
     public GameObject Confirmacao3;
     public GameObject Numvidas;
     public GameObject Numvidas2;
+    public GameObject gate1;
+    public GameObject gate2;
 
 
 
-
+    private bool portao1, portao2;
     private int SelectedLevelNumber;
 		  
 	// Use this for initialization
 	void OnEnable()
 	{
+        if (Banco.TotalDeEstrelas() >= 20)
+        {
+            portao1 = true;
+            Sprite tex = Resources.Load("GateOpen", typeof(Sprite)) as Sprite;
+
+            gate1.GetComponent<SpriteRenderer>().sprite = tex;
+        }
+        else
+        { portao1 = false; }
+        if (Banco.TotalDeEstrelas() >= 40)
+        {
+            portao2 = true;
+            Sprite tex = Resources.Load("GateOpen", typeof(Sprite)) as Sprite;
+
+            gate2.GetComponent<SpriteRenderer>().sprite = tex;
+        }
+        else
+        { portao2 = false; }
         if (PlayerPrefs.GetInt("Vidas") < 1)
         {
             PlayerPrefs.SetInt("Vidas", 0);
@@ -85,8 +105,11 @@ public class MapaLevel_inf : MonoBehaviour {
 
 	private void OnLevelSelected(object sender, LevelReachedEventArgs e)
 	{
-
-		if (LevelsMap.GetIsConfirmationEnabled() && !LevelsMap.IsLevelLocked(e.Number) && PlayerPrefs.GetInt("Vidas") > 0)
+        if ((!portao1 && e.Number > 9) || (!portao2 && e.Number > 17))
+        {
+      
+        }
+        else if (LevelsMap.GetIsConfirmationEnabled() && !LevelsMap.IsLevelLocked(e.Number) && PlayerPrefs.GetInt("Vidas") > 0)
         {
 			LevelsMap.ChangeIsClickEnabled(false);
             Confirmacao.SetActive(true);
@@ -186,7 +209,7 @@ public class MapaLevel_inf : MonoBehaviour {
         #if (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
                     if (UnityEngine.Advertisements.Advertisement.isReady())
                     {
-                        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
+                        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 20);
                         Debug.Log("show!");
                         UnityEngine.Advertisements.Advertisement.Show();
                     }
