@@ -89,7 +89,7 @@ public class MapaLevel_inf : MonoBehaviour {
 
 		x = Screen.width / 2 - w / 2 + x2 * Screen.width;
 
-		GUI.Label (new Rect (x, y, w*2, h), "<size=" + fonte.ToString () + ">" + texto2 + "</size>");
+		//GUI.Label (new Rect (x, y, w*2, h), "<size=" + fonte.ToString () + ">" + texto2 + "</size>");
 
 		x = Screen.width / 2 - w / 2 + x3 * Screen.width;
 

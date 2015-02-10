@@ -8,6 +8,5 @@ public class Rodar : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         this.transform.Rotate(0,0,velocidade);
-        Debug.Log("asd");
-	}
+  }
 }

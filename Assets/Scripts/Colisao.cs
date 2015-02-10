@@ -125,6 +125,8 @@ public class Colisao : MonoBehaviour {
         
         
     }
+        
+ 
 
     void OnTriggerEnter2D(Collider2D colisor) 
     {
@@ -139,7 +141,8 @@ public class Colisao : MonoBehaviour {
         }
         if (colisor.CompareTag("Agua"))
         {
-            Debug.Log("lalalala");
+            Debug.Log("xaxsa");
+            this.rigidbody2D.AddForce(Vector2.up * 10);
         }
         if (colisor.gameObject.CompareTag("Estrela"))
         {

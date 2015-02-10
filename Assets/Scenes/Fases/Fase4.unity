@@ -2291,7 +2291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Velocidade: 2
   Ponto: {fileID: 100000, guid: e882d36a255f3f34ab761101a92a7575, type: 2}
-  MostrarLinha: 1
+  MostrarLinha: 0
   pontos:
   - {fileID: 1825363538}
   - {fileID: 2111007132}
@@ -3014,6 +3014,10 @@ Prefab:
     - target: {fileID: 12000000, guid: d7e3e0fbb5f3bf1459378310d53f5753, type: 2}
       propertyPath: m_Positions.Array.data[1].y
       value: -3.30000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d7e3e0fbb5f3bf1459378310d53f5753, type: 2}
+      propertyPath: MostrarLinha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7e3e0fbb5f3bf1459378310d53f5753, type: 2}

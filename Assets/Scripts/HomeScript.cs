@@ -57,6 +57,17 @@ public class HomeScript : MonoBehaviour {
 
     void Reiniciar()
     {
+        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+                  
+        foreach (GameObject PecaAmarela in GameObjects)
+        {
+            if (PecaAmarela.tag == "Respawn")
+            {
+                PecaAmarela.rigidbody2D.isKinematic = true;
+            }
+        
+        }
+
         Destroy(Bola);
         tempo2 = Time.time;
         Bola = GameObject.Instantiate(Bolao) as GameObject;

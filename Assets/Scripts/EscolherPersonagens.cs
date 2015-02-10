@@ -20,9 +20,7 @@ public class EscolherPersonagens : MonoBehaviour {
             Application.LoadLevel(0);
         }
         
-        tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
-
-        Personagem.sprite = tex;
+       
 
     }
 
