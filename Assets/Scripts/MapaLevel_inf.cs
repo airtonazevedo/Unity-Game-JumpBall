@@ -28,6 +28,9 @@ public class MapaLevel_inf : MonoBehaviour {
 	// Use this for initialization
 	void OnEnable()
 	{
+        AdColony.OnV4VCResult = UpdateCurrencyText;
+	
+        AdColony.Configure("1.0", "app62487d99abf64742a2", "vzbf5bd67a56cb4d35bf");
         if (Banco.TotalDeEstrelas() >= 20)
         {
             portao1 = true;
@@ -203,23 +206,33 @@ public class MapaLevel_inf : MonoBehaviour {
 					LevelsMap.ChangeIsClickEnabled(true);
                     Debug.Log("Video ganha vidas");
                    // PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 50);
-                    Confirmacao2.SetActive(false);
-                    Confirmacao3.SetActive(false);
+                
                     
         #if (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
-                    if (UnityEngine.Advertisements.Advertisement.isReady())
+                    
+                    if (AdColony.IsVideoAvailable())
+                    {
+                         AdColony.ShowV4VC(false, "vzbf5bd67a56cb4d35bf");
+                         Confirmacao2.SetActive(false);
+                         Confirmacao3.SetActive(false);
+                    }
+                    else if (UnityEngine.Advertisements.Advertisement.isReady())
                     {
                         PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 20);
-                        Debug.Log("show!");
                         UnityEngine.Advertisements.Advertisement.Show();
+                        Confirmacao2.SetActive(false);
+                        Confirmacao3.SetActive(false);
                     }
                     else
                     {
-                        Debug.Log("nao!");
+                        Debug.Log("Chega");
                     }
-        #endif
+        #else
+                         Confirmacao2.SetActive(false);
+                        Confirmacao3.SetActive(false);
+#endif
 
-          
+
                 }
                 if (hitCollider.name == "BotaoComprarVidas")
                 {
@@ -237,6 +250,13 @@ public class MapaLevel_inf : MonoBehaviour {
             catch { }
         }
 	}
+
+    public void UpdateCurrencyText(bool success, string currencyName, int currencyAwarded)
+    {
+       
+        PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 20);
+ 
+    }
 
     void Vidas()
     {
