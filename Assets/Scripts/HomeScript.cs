@@ -6,6 +6,7 @@ public class HomeScript : MonoBehaviour {
 
     public GameObject Bolao;
 
+    private bool chave;
     private float _velocidade,tempo = 0, tempo2 = 0;
     private Vector3 _bolaini;
     private GameObject Bola;
@@ -13,6 +14,7 @@ public class HomeScript : MonoBehaviour {
 	// Use this for initialization
     void Start()
     {
+        chave = false;
         Time.timeScale = 1;
 
         _bolaini = Vector3.zero;
@@ -28,7 +30,7 @@ public class HomeScript : MonoBehaviour {
 
         if (!PlayerPrefs.HasKey("Vidas")) 
         {
-            PlayerPrefs.SetInt("Vidas", 100);
+            PlayerPrefs.SetInt("Vidas", 30);
         }
         #if (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
 
@@ -48,6 +50,20 @@ public class HomeScript : MonoBehaviour {
        // Debug.Log("lol");
         Bola.transform.Translate(Bola.transform.right * Time.deltaTime * _velocidade);
 
+        if(Bola.transform.position.x>0 && !chave)
+        {
+            chave = true;
+            GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+            Debug.Log("xaxa");
+            foreach (GameObject PecaAmarela in GameObjects)
+            {
+                if (PecaAmarela.tag == "Respawn")
+                {
+                    PecaAmarela.rigidbody2D.isKinematic = true;
+                }
+
+            }
+        }
         if(   Input.GetKeyDown(KeyCode.Escape) )
         {
             Application.Quit();
@@ -57,16 +73,8 @@ public class HomeScript : MonoBehaviour {
 
     void Reiniciar()
     {
-        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
-                  
-        foreach (GameObject PecaAmarela in GameObjects)
-        {
-            if (PecaAmarela.tag == "Respawn")
-            {
-                PecaAmarela.rigidbody2D.isKinematic = true;
-            }
+
         
-        }
 
         Destroy(Bola);
         tempo2 = Time.time;

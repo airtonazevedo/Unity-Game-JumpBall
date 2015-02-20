@@ -15,9 +15,9 @@ public class Personagens : MonoBehaviour {
     public float w1;
 
     Sprite tex;
+
     void OnGUI()
     {
-        string[] nome = new string[18];
         float h, w, x, y;
 
         h = Screen.height * h1;
@@ -26,23 +26,20 @@ public class Personagens : MonoBehaviour {
       
         y = Screen.height / 2 - w / 2 + y1 * Screen.height;
 
-        for (int i = 0; i < 18; i++)
-        {
-            nome[i] = "B" + (i+1).ToString();
-           // Debug.Log(nome[i]);
-        }
-
+    
         for (int i = 0; i < 6; i++)
         {
             x = (Screen.width / 7 * (i+1)) - w/2;
 
             if (GUI.Button(new Rect(x, y, w, h), btnTexture[i])) { 
               //  transform.parent.SendMessage(nome[i]);
+
                 if (Banco.TotalDeEstrelas() >= i * 3)
                 {
-                    tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
                     PlayerPrefs.SetInt("bola", i);
-                    texo.GetComponent<TextMesh>().text = "";
+                 
+                    tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
+                     texo.GetComponent<TextMesh>().text = "";
                 }
                 else 
                 {
@@ -64,9 +61,9 @@ public class Personagens : MonoBehaviour {
               //  transform.parent.SendMessage(nome[i]);
                 if (Banco.TotalDeEstrelas() >= i * 3)
                 {
-                    tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
                     PlayerPrefs.SetInt("bola", i);
-                    texo.GetComponent<TextMesh>().text = "";
+                    tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
+                     texo.GetComponent<TextMesh>().text = "";
                 }
                 else
                 {
@@ -88,8 +85,9 @@ public class Personagens : MonoBehaviour {
             if (GUI.Button(new Rect(x, y, w, h), btnTexture[i])) {
                 if (Banco.TotalDeEstrelas() >= i * 3)
                 {
-                    tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
                     PlayerPrefs.SetInt("bola", i);
+                    
+                    tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
                     texo.GetComponent<TextMesh>().text = "";
              
                 }
@@ -118,6 +116,8 @@ public class Personagens : MonoBehaviour {
 
 
 	void Start () {
+       
+
         tex = Resources.Load((PlayerPrefs.GetInt("bola") + 1).ToString(), typeof(Sprite)) as Sprite;
                    
 	}

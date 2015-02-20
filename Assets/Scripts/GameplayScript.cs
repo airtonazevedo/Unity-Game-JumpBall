@@ -27,6 +27,7 @@ public class GameplayScript : MonoBehaviour {
    
 	// Use this for initialization
 	void Start () {
+        this.transform.position = Vector3.zero;
         if (PlayerPrefs.GetInt("Vidas") < 1)
         {
             PlayerPrefs.SetInt("Vidas", 0);

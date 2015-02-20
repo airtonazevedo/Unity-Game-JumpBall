@@ -215,6 +215,8 @@ public class MapaLevel_inf : MonoBehaviour {
                          AdColony.ShowV4VC(false, "vzbf5bd67a56cb4d35bf");
                          Confirmacao2.SetActive(false);
                          Confirmacao3.SetActive(false);
+                         PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 20);
+                       
                     }
                     else if (UnityEngine.Advertisements.Advertisement.isReady())
                     {
@@ -237,11 +239,10 @@ public class MapaLevel_inf : MonoBehaviour {
                 if (hitCollider.name == "BotaoComprarVidas")
                 {
 					
-					LevelsMap.ChangeIsClickEnabled(true);
-                    Debug.Log("Comprar vidas");
-                    PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 100);
-                    Confirmacao2.SetActive(false);
-                    Confirmacao3.SetActive(false);
+				//	LevelsMap.ChangeIsClickEnabled(true);
+                  //  PlayerPrefs.SetInt("Vidas", PlayerPrefs.GetInt("Vidas") + 100);
+               //     Confirmacao2.SetActive(false);
+                 //   Confirmacao3.SetActive(false);
           
                     
                 }

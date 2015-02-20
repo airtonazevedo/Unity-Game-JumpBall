@@ -2610,9 +2610,9 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1159746265}
   m_GameObject: {fileID: 236397815}
-  m_Text: Comprar
+  m_Text: Vidas Com
   m_OffsetZ: -1
-  m_CharacterSize: .200000003
+  m_CharacterSize: .180000007
   m_LineSpacing: 1
   m_Anchor: 1
   m_Alignment: 1
@@ -4665,6 +4665,60 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1d3a30c37f0aab442a665c928ac72af2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &479057348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+  m_PrefabInternal: {fileID: 621776006}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479057351}
+  - 114: {fileID: 479057350}
+  - 114: {fileID: 479057349}
+  m_Layer: 0
+  m_Name: TapjoyPluginPrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &479057349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471310, guid: a1119211be2f3441589b81e332e5df68,
+    type: 2}
+  m_PrefabInternal: {fileID: 621776006}
+  m_GameObject: {fileID: 479057348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 884f0e05c88c04b789c4de645b917b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CM: {fileID: 794672633}
+--- !u!114 &479057350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: a1119211be2f3441589b81e332e5df68,
+    type: 2}
+  m_PrefabInternal: {fileID: 621776006}
+  m_GameObject: {fileID: 479057348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7b67bd3adcd4044858bd28bc19da34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &479057351
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+  m_PrefabInternal: {fileID: 621776006}
+  m_GameObject: {fileID: 479057348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.136229038, y: 1.08566844, z: -.0157184601}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &482648596
 GameObject:
   m_ObjectHideFlags: 0
@@ -6232,6 +6286,54 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 787cfd67b35a77f4a9a5cb44f62c9108, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &621776006
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.136229038
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.08566844
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.0157184601
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471310, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+      propertyPath: CM
+      value: 
+      objectReference: {fileID: 794672633}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a1119211be2f3441589b81e332e5df68, type: 2}
+  m_RootGameObject: {fileID: 479057348}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &629192414
 GameObject:
   m_ObjectHideFlags: 0
@@ -8565,7 +8667,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1159746265}
   m_GameObject: {fileID: 820677488}
-  m_Text: Vidas
+  m_Text: TapJoy
   m_OffsetZ: -1
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -11157,6 +11259,18 @@ Prefab:
     - target: {fileID: 128026, guid: eeb5b414ffcf6ed4a8cda042d4e4f285, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10228036, guid: eeb5b414ffcf6ed4a8cda042d4e4f285, type: 2}
+      propertyPath: m_Text
+      value: Vidas Com
+      objectReference: {fileID: 0}
+    - target: {fileID: 10228040, guid: eeb5b414ffcf6ed4a8cda042d4e4f285, type: 2}
+      propertyPath: m_Text
+      value: TapJoy
+      objectReference: {fileID: 0}
+    - target: {fileID: 10228036, guid: eeb5b414ffcf6ed4a8cda042d4e4f285, type: 2}
+      propertyPath: m_CharacterSize
+      value: .180000007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eeb5b414ffcf6ed4a8cda042d4e4f285, type: 2}
@@ -14588,9 +14702,9 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 2099231051}
   m_GameObject: {fileID: 1468561132}
-  m_Text: Comprar
+  m_Text: Vidas Com
   m_OffsetZ: -1
-  m_CharacterSize: .200000003
+  m_CharacterSize: .180000007
   m_LineSpacing: 1
   m_Anchor: 1
   m_Alignment: 1
@@ -15583,7 +15697,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 2099231051}
   m_GameObject: {fileID: 1558685152}
-  m_Text: Vidas
+  m_Text: TapJoy
   m_OffsetZ: -1
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -20537,6 +20651,18 @@ Prefab:
     - target: {fileID: 176766, guid: ef6f394f6a1f3db47ba59f8654bb3c35, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10276754, guid: ef6f394f6a1f3db47ba59f8654bb3c35, type: 2}
+      propertyPath: m_Text
+      value: Vidas Com
+      objectReference: {fileID: 0}
+    - target: {fileID: 10276756, guid: ef6f394f6a1f3db47ba59f8654bb3c35, type: 2}
+      propertyPath: m_Text
+      value: TapJoy
+      objectReference: {fileID: 0}
+    - target: {fileID: 10276754, guid: ef6f394f6a1f3db47ba59f8654bb3c35, type: 2}
+      propertyPath: m_CharacterSize
+      value: .180000007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef6f394f6a1f3db47ba59f8654bb3c35, type: 2}
