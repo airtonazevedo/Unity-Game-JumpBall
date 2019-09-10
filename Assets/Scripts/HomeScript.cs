@@ -30,7 +30,7 @@ public class HomeScript : MonoBehaviour {
 
         if (!PlayerPrefs.HasKey("Vidas")) 
         {
-            PlayerPrefs.SetInt("Vidas", 30);
+            PlayerPrefs.SetInt("Vidas", 50);
         }
         #if (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
 

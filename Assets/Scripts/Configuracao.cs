@@ -16,7 +16,7 @@ public class Configuracao : MonoBehaviour {
 
     void Limpar()
     {
-        PlayerPrefs.SetInt("Vidas", 10);
+        PlayerPrefs.SetInt("Vidas", 50);
         Banco.Limpar();
     }
 
